@@ -12,6 +12,7 @@ public class account {
     private String phoneNumber;
     private paymentInfo payInfo;
     private ArrayList cart;
+    private int tal;
 
     public String setUserID(String s) {
         //Get username pane content
