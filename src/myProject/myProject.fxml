@@ -1,6 +1,10 @@
 <?import javafx.scene.layout.GridPane?>
 <GridPane fx:controller="myProject.sampleController"
+<<<<<<< Updated upstream
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://javafx.com/fxml ">
+=======
+          xmlns:fx="http://javafx.com/fxml" aligment="center" hgap="10" vgap="10">
+>>>>>>> Stashed changes
 
 </GridPane>
