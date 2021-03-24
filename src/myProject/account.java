@@ -10,7 +10,7 @@ public class account {
     private String password;
     private String email;
     private String phoneNumber;
-    private paymentInfo payInfo;
+    private paymentInfo payInfo = new paymentInfo();
     private ArrayList cart;
     private int tal;
 

@@ -13,7 +13,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="javafx-swt" level="project" />
     <orderEntry type="library" name="javafx-swt" level="project" />
-    <orderEntry type="library" name="javafx-swt" level="project" />
+    <orderEntry type="library" exported="" name="javafx.media" level="project" />
   </component>
 </module>
