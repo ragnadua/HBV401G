@@ -31,5 +31,14 @@ public class booking {
 
     }
 
+    public Boolean setPaymentConfirmed(boolean b) {
+        b = paymentConfirmed;
+        if ()
+    }
+
+    public Boolean setPickUp() {
+        //Button listener sem returns true ef hakad i else false.
+    }
+
 
 }
