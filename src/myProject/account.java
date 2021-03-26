@@ -15,23 +15,31 @@ public class account {
     private int tal;
 
     public String setUserID(String s) {
+        s = userID;
+        return s;
         //Get username pane content
     }
 
     public String setPassword(String s) {
-
+        s = password;
+        return s;
     }
 
     public String setEmail(String s) {
-
+        s = email;
+        return s;
     }
 
     public String setPhoneNumber(String s) {
-
+        s = phoneNumber;
+        return s;
     }
 
     public ArrayList setCart(List l) {
         // á að uppfæra cart eftir að bookingController gerir addToCart()
+        l = cart;
+        return l;
+
 
     }
 
