@@ -10,4 +10,12 @@ public class tripController {
     public Boolean createTrip(Boolean b) {
         return b;
     }
+
+    import javafx.collections.maxReservations;
+    import javafx.fxml.FXML;
+    import javafx.Initializable;
+    import javafx.event.ActionEvent;
+    import javafx.scene.control.cancelTrip;
+
 }
+
