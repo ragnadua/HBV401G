@@ -1,6 +1,7 @@
 package myProject;
 
 public class bookingController {
+
     public Boolean addToCart(booking b) {
 
     }

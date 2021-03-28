@@ -1,5 +1,7 @@
 package myProject;
 
+import java.util.ArrayList;
+
 public class booking {
     private trip tripUnit;
     private account accountUnit;
@@ -7,7 +9,9 @@ public class booking {
     private float price;
     private float discount;
     private Boolean paymentConfirmed;
-    private int NmbRes;
+    private int nmbRes;
+    private ArrayList passList;
+
 
     public trip getTripUnit(trip t) {
 
@@ -28,6 +32,15 @@ public class booking {
 
     public int setNmbRes(int t) {
 
+
+    }
+
+    public int getNmbRes() {
+        //sækir úr Booking: setnmbres
+        return nmbRes;
+    }
+
+    private String addToPassList() {
 
     }
 
