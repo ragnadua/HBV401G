@@ -1,5 +1,7 @@
 package myProject;
 
+//import com.sun.org.apache.xpath.internal.operations.String;
+
 import java.util.ArrayList;
 
 public class account {
@@ -11,9 +13,9 @@ public class account {
     private String phoneNumber;
     private paymentInfo payInfo = new paymentInfo();
     private ArrayList cart;
-    private int tal;
 
-    public account(String userID, String firstName, String lastName, String password, String email, String phoneNumber, paymentInfo payInfo, ArrayList cart, int tal) {
+
+    public account(String userID, String firstName, String lastName, String password, String email, String phoneNumber, paymentInfo payInfo, ArrayList cart) {
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -22,7 +24,7 @@ public class account {
         this.phoneNumber = phoneNumber;
         this.payInfo = payInfo;
         this.cart = cart;
-        this.tal = tal;
+
     }
 
     public String getUserID() {
@@ -89,13 +91,6 @@ public class account {
         this.cart = cart;
     }
 
-    public int getTal() {
-        return tal;
-    }
-
-    public void setTal(int tal) {
-        this.tal = tal;
-    }
 /*
     public String setUserID(String s) {
         s = userID;
