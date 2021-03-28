@@ -4,7 +4,7 @@ import org.junit.*;
 
 import static org.junit.Assert.*;
 
-public class bookingTester {
+public class accountControllerTester {
 
 
     @Before
