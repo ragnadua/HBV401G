@@ -1,7 +1,6 @@
 package myProject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class account {
     private String userID;
@@ -14,7 +13,90 @@ public class account {
     private ArrayList cart;
     private int tal;
 
+    public account(String userID, String firstName, String lastName, String password, String email, String phoneNumber, paymentInfo payInfo, ArrayList cart, int tal) {
+        this.userID = userID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.payInfo = payInfo;
+        this.cart = cart;
+        this.tal = tal;
+    }
 
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public paymentInfo getPayInfo() {
+        return payInfo;
+    }
+
+    public void setPayInfo(paymentInfo payInfo) {
+        this.payInfo = payInfo;
+    }
+
+    public ArrayList getCart() {
+        return cart;
+    }
+
+    public void setCart(ArrayList cart) {
+        this.cart = cart;
+    }
+
+    public int getTal() {
+        return tal;
+    }
+
+    public void setTal(int tal) {
+        this.tal = tal;
+    }
+/*
     public String setUserID(String s) {
         s = userID;
         return s;
@@ -47,6 +129,6 @@ public class account {
     public paymentInfo setPayInfo(paymentInfo p) {
         p = payInfo;
         return p;
-    }
+    }*/
 
 }
