@@ -1,23 +1,8 @@
 package myProject;
 
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
+public class tripController {
+    private static tripController
 
-import java.awt.*;
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class tripController implements Initializable {
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        @FXML
-        private Button addButton;
-        @FXML
-        private ListView maxReservations;
-        @FXML
-    }
 }
 
 /*public class tripController {
