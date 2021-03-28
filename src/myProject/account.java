@@ -1,7 +1,5 @@
 package myProject;
 
-//import com.sun.org.apache.xpath.internal.operations.String;
-
 import java.util.ArrayList;
 
 public class account {
