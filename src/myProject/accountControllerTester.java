@@ -1,8 +1,8 @@
 package myProject;
 
-import org.junit.*;
-
-import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 public class accountControllerTester {
 
@@ -18,8 +18,8 @@ public class accountControllerTester {
     }
 
     @Test
-    void testLogInBehaviour() {
-        assertEquals(expected :"2107002260", account.getUserID());
+    public void testLogInBehaviour() {
+        assert
 
     }
 
