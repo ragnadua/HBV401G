@@ -9,6 +9,7 @@ public class trip {
     private float time;
     private String hostEmail;
     private int maxReservations;
+    private int minReservations;
     private boolean isFullyBooked;
     private String category;
     private BufferedImage schedule;
@@ -21,19 +22,11 @@ public class trip {
         this.time = time;
         this.hostEmail = hostEmail;
         this.maxReservations = maxReservations;
+        this.minReservations = maxReservations;
         this.isFullyBooked = isFullyBooked;
         this.category = category;
         this.schedule = schedule;
         this.capacity = capacity;
-    }
-
-    //@Override
-    //public String toSting() {
-    //  return tripID + destination + date + time;
-    //}
-    public static void main(String[] args) {
-        trip t = new trip();
-        t.printDetails();
     }
 
     public String getTripID() {
@@ -80,8 +73,16 @@ public class trip {
         return maxReservations;
     }
 
-    public void setMaxReservations(int maxReservations) {
-        this.maxReservations = maxReservations;
+    public void setMaxReservations(int minReservations) {
+        this.minReservations = minReservations;
+    }
+
+    public int getMinReservations() {
+        return maxReservations;
+    }
+
+    public void setMinReservations(int minReservations) {
+        this.minReservations = minReservations;
     }
 
     public boolean isFullyBooked() {
@@ -119,53 +120,5 @@ public class trip {
     public void printDetails() {
         System.out.println(tripID + destination + date + time);
     }
-
-    //private booking Booking = new booking();
-
-    //public String setTripID(String s) {
-    //s = tripID;
-    //return s;
-    //}
-
-    //public String setDestination(String s) {
-    //  s = destination;
-    //return s;
-    //}
-
-    // public float setDate(float d) {
-    //   d = date;
-    // return d;
-    //}
-
-    //public float setTime(float t) {
-    //  t = time;
-    //return t;
-    //}
-
-    //public String setHostEmail(String s) {
-    //  s = hostEmail;
-    //return s;
-    //}
-
-    // public Boolean setFullyBooked(int r) {
-    //if (r == maxReservations) {
-    //  return true;
-    //} else return false;
-    //}
-
-    //public int setMaxReservations(int r) {
-    //r = maxReservations;
-    //return r;
-    // }
-
-    //public int currentCapacity(int t) {
-    //capacity = maxReservations- nmbRes
-    //}
-
-    // public String setCategory(String s) {
-    // s = category;
-    // return s;
-    // }
-
 
 }
