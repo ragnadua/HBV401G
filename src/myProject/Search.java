@@ -1,14 +1,17 @@
 package myProject;
 
 public class Search {
+    private trip trip;
 
     public String searchDestination(String dest) {
-        dest = trip.getDestination();
-        if (trip.isFullyBooked() == true)
+        if (dest == trip.getDestination()) {
+
+        }
+        /*if (trip.isFullyBooked() == true)
             return null;
         if (!searchDestination(dest))
             return null;
-        return dest;
+        return dest;*/
     }
 
     public String searchCategory(String category) {

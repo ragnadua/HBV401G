@@ -11,6 +11,42 @@ public class Database {
     public Database() {
     }
 
+    public ArrayList<Trip> getTrip(){
+        ArrayList<Trip> trip = new ArrayList<>();
+        Trip.add(new Trip("Ísafjörður", "Hiking"));
+        Trip.add(new Trip("Reykjavík", "Skiing"));
+        Trip.add(new Trip("Ísafjörður", "City tour"));
+        Trip.add(new Trip("Eigilsstaðir", "Sailing"));
+        Trip.add(new Trip("Akureyri", "City tour"));
+        return trip;
+    }
+
+    public ObservableList<trip> getDestination() {
+        ObservableList<trip> destination = FXCollections.observableArrayList();
+        trip dest1 = new trip("Reykjavík");
+        trip dest2 = new trip("Akureyri");
+        trip dest3 = new trip("Ísafjörður");
+        trip dest4 = new trip("Egisstaðir");
+        trip.add(dest1);
+        trip.add(dest2);
+        trip.add(dest3);
+        trip.add(dest4);
+        return destination;
+    }
+
+    public ObservableList<trip> getCategory() {
+        ObservableList<trip> category = FXCollections.observableArrayList();
+        trip cat1 = new trip("Skiing");
+        trip cat2 = new trip("Hiking");
+        trip cat3 = new trip("City tour");
+        trip cat4 = new trip("Sailing");
+        trip.add(cat1);
+        trip.add(cat2);
+        trip.add(cat3);
+        trip.add(cat4);
+        return category;
+    }
+
     public ObservableList<account> getAccounts() {
         //Create an empty Observable list that we will fill with data
         ObservableList<account> accounts = FXCollections.observableArrayList();
@@ -57,6 +93,30 @@ public class Database {
         if (ID.equals(ID2) && password.equals(pw2))
             return account1;
         else return null;
+    }
+
+    public trip getTripByDestination(String d) {
+        if (d == trip1.getDestination())
+            return trip1;
+        else if (d == trip2.getDestination())
+            return trip2;
+        else if (d == trip3.getDestination())
+            return trip3;
+        else if (d == trip4.getDestination())
+            return trip4;
+        else
+            System.out.println("Not avalible");
+    }
+
+    public trip getTripByCategory(String c) {
+        if (c == trip1.getCategory())
+            return trip1;
+        else if (c == trip2.getCategory())
+            return trip2;
+        else if (c == trip3.getCategory())
+            return trip3;
+        else if (c == trip4.getCategory())
+            return trip4;
     }
 
 }
