@@ -22,7 +22,7 @@ public class trip {
         this.time = time;
         this.hostEmail = hostEmail;
         this.maxReservations = maxReservations;
-        this.minReservations = maxReservations;
+        this.minReservations = minReservations;
         this.isFullyBooked = isFullyBooked;
         this.category = category;
         this.schedule = schedule;
@@ -78,7 +78,7 @@ public class trip {
     }
 
     public int getMinReservations() {
-        return maxReservations;
+        return minReservations;
     }
 
     public void setMinReservations(int minReservations) {
