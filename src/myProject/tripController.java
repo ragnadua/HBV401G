@@ -15,6 +15,7 @@ public class tripController {
         if (nmbRes <= minReservations) {
             System.out.println("Trip is canceled");
         }
+        return tripOwner;
     }
 
     public trip createTrip(String tripID, String destination, float date, float time, String hostEmail,
