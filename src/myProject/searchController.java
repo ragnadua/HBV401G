@@ -1,6 +1,9 @@
 package myProject;
 
-public class SearchController {
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+public class searchController {
     private Database DB; // Þarf ég ekki að kalla allt í Database eða á ég að kalla allt í trip?
 
     // Er þetta ekki hér?
@@ -14,8 +17,8 @@ public class SearchController {
     }*/
 
     // Ef svo ætti þetta ekki þá að vera svona?
-    private ObservableList<Database> getTrip(Trip trip) {
-        ObservableList<Trip> bookedTrip = FXCollections.observableArrayList();
+    private ObservableList<Database> getTrip(trip trip) {
+        ObservableList<trip> bookedTrip = FXCollections.observableArrayList();
         ArrayList<Databae> trips = user.getTrip();
         for (Trip t : trips) {
             bookedTrip.add(trip.getTrip());
