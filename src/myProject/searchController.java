@@ -1,6 +1,6 @@
 package myProject;
 
-public class searchController {
+public class SearchController {
     private Database DB; // Þarf ég ekki að kalla allt í Database eða á ég að kalla allt í trip?
 
     // Er þetta ekki hér?
@@ -14,10 +14,10 @@ public class searchController {
     }*/
 
     // Ef svo ætti þetta ekki þá að vera svona?
-    private ObservableList<Database> getTrip(trip trip){
-        ObservableList<trip> bookedTrip = FXCollections.observableArrayList();
+    private ObservableList<Database> getTrip(Trip trip) {
+        ObservableList<Trip> bookedTrip = FXCollections.observableArrayList();
         ArrayList<Databae> trips = user.getTrip();
-        for(Trip t : trips){
+        for (Trip t : trips) {
             bookedTrip.add(trip.getTrip());
         }
         return bookedTrip;

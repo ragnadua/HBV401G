@@ -2,7 +2,7 @@ package myProject;
 
 import java.awt.image.BufferedImage;
 
-public class trip {
+public class Trip {
     private String tripID;
     private String destination;
     private float date;
@@ -15,7 +15,7 @@ public class trip {
     private BufferedImage schedule;
     public int capacity;
 
-    public trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
+    public Trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
         this.tripID = tripID;
         this.destination = destination;
         this.date = date;
@@ -117,8 +117,18 @@ public class trip {
         this.capacity = capacity;
     }
 
-    public void printDetails() {
-        System.out.println(tripID + destination + date + time);
+<<<<<<<HEAD
+
+    public boolean isCanceledTrip() {
+        return canceledTrip;
     }
 
-}
+    public void cancelTrip() {
+        canceledTrip = true;
+=======
+        public void printDetails () {
+            System.out.println(tripID + destination + date + time);
+>>>>>>>parent of e96b215(sun2)
+        }
+
+    }

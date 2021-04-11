@@ -1,12 +1,12 @@
 package myProject;
 
-public class bookingController {
+public class BookingController {
 
-    public Boolean addToCart(booking b) {
+    public Boolean addToCart(Booking b) {
 
     }
 
-    public Boolean cancelTrip(booking b) {
+    public Boolean cancelTrip(Booking b) {
         //Hækkar aftur currentCapacity
         //núllar nmbRes og paymentconfirmed
         //Tekur nöfnin sem sett voru á passengerList út

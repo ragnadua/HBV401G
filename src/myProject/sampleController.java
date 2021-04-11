@@ -1,5 +1,5 @@
 package myProject;
 
-public class sampleController {
+public class SampleController {
 
 }
