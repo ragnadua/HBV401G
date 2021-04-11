@@ -47,10 +47,7 @@ public class Database {
         return category;
     }
 
-<<<<<<<HEAD
-
     public ObservableList<Account> getAccounts() {
-=======
         public static void main (String[]args){
             int maxReservations = 30;
             int minReservations = 10;
@@ -60,7 +57,6 @@ public class Database {
         }
 
         public ObservableList<Account> getAccounts () {
->>>>>>>parent of e96b215(sun2)
             //Create an empty Observable list that we will fill with data
             ObservableList<Account> Accounts = FXCollections.observableArrayList();
             Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
@@ -99,43 +95,44 @@ public class Database {
         return trips;
     }*/
 
-<<<<<<< HEAD
-    public Account getAccountByIDandPassword(String ID, String password) {
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
-        String ID2 = account1.getUserID();
-        String pw2 = account1.getPassword();
-        if (ID.equals(ID2) && password.equals(pw2))
-            return account1;
-        else return null;
-    }
 
-    public PaymentInfo getPaymentInfoByUserID(String ID) {
-        PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", "131");
+        public Account getAccountByIDandPassword (String ID, String password){
+            Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+            String ID2 = account1.getUserID();
+            String pw2 = account1.getPassword();
+            if (ID.equals(ID2) && password.equals(pw2))
+                return account1;
+            else return null;
+        }
 
-    }
+        public PaymentInfo getPaymentInfoByUserID (String ID){
+            PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", "131");
+            return PaymentInfo;
 
-    {
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
-        String ID2 = account1.getUserID();
-        String pw2 = account1.getPassword();
-        if (ID.equals(ID2) && password.equals(pw2))
-            return account1;
-        else return null;
-    }
+        }
 
-    public Trip getTripByDestination(String d) {
-        if (d == trip1.getDestination())
-            return trip1;
-        else if (d == trip2.getDestination())
-            return trip2;
-        else if (d == trip3.getDestination())
-            return trip3;
-        else if (d == trip4.getDestination())
-            return trip4;
-        else
-            System.out.println("Not avalible");
-    }
-=======
+        {
+            Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+            String ID2 = account1.getUserID();
+            String pw2 = account1.getPassword();
+            if (ID.equals(ID2) && password.equals(pw2))
+                return account1;
+            else return null;
+        }
+
+        public Trip getTripByDestination (String d){
+            if (d == trip1.getDestination())
+                return trip1;
+            else if (d == trip2.getDestination())
+                return trip2;
+            else if (d == trip3.getDestination())
+                return trip3;
+            else if (d == trip4.getDestination())
+                return trip4;
+            else
+                System.out.println("Not avalible");
+        }
+
         public Account getAccountByIDandPassword (String ID, String password){
             Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
             String ID2 = account1.getUserID();
@@ -182,6 +179,5 @@ public class Database {
             else if (c == trip4.getCategory())
                 return trip4;
         }
->>>>>>> 6f730d0dbda6b10bb6ba9cedcad17b09fdea15a7
 
     }
