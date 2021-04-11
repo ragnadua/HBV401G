@@ -30,7 +30,6 @@ public class booking {
 
     public int setNmbRes(int t) {
 
-
     }
 
     public int getNmbRes() {
