@@ -2,7 +2,7 @@ package myProject;
 
 import java.awt.image.BufferedImage;
 
-public class trip {
+public class Trip {
     private String tripID;
     private String destination;
     private float date;
@@ -14,12 +14,15 @@ public class trip {
     private String category;
     private BufferedImage schedule;
     public int capacity;
-
 <<<<<<< HEAD
-    public Trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
+    private boolean canceledTrip;
+    private int price;
+
+    public Trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, int price) {
 =======
-    public trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
->>>>>>> parent of e96b215 (sun2)
+
+    public Trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
+>>>>>>> 6f730d0dbda6b10bb6ba9cedcad17b09fdea15a7
         this.tripID = tripID;
         this.destination = destination;
         this.date = date;
@@ -31,6 +34,7 @@ public class trip {
         this.category = category;
         this.schedule = schedule;
         this.capacity = capacity;
+        this.price = price;
     }
 
     public String getTripID() {
@@ -122,7 +126,16 @@ public class trip {
     }
 
 <<<<<<< HEAD
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int Price) {
+        this.price = Price;
+    }
+=======
 <<<<<<<HEAD
+>>>>>>> 6f730d0dbda6b10bb6ba9cedcad17b09fdea15a7
 
     public boolean isCanceledTrip() {
         return canceledTrip;
@@ -136,8 +149,9 @@ public class trip {
 >>>>>>>parent of e96b215(sun2)
         }
 
+<<<<<<< HEAD
+
+}
 =======
-    public void printDetails() {
-        System.out.println(tripID + destination + date + time);
->>>>>>> parent of e96b215 (sun2)
     }
+>>>>>>> 6f730d0dbda6b10bb6ba9cedcad17b09fdea15a7

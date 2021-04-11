@@ -1,37 +1,27 @@
 package myProject;
 
-<<<<<<< HEAD
+import java.awt.image.BufferedImage;
+
 public class TripController {
     private Booking booking;
     private Trip admin;
-=======
-public class tripController {
-    private booking booking;
-    private trip admin;
 
->>>>>>> parent of e96b215 (sun2)
 
-    public tripController() {
+    public TripController() {
 
     }
 
-    public tripController(trip trip) {
+    public TripController(Trip trip) {
         this.admin = trip;
     }
 
-<<<<<<< HEAD
     public Trip cancelTrip() {
-        if (booking.nmbRes <= Trip.minReservations) {
-=======
-    public trip cancelTrip() {
-        if (booking.nmbRes <= trip.minReservations) {
->>>>>>> parent of e96b215 (sun2)
+        if (booking.getNmbRes() <= Trip.getMinReservations) {
             System.out.println("Trip is canceled");
         }
         return admin;
     }
 
-<<<<<<< HEAD
 <<<<<<<HEAD
 
     public static void main(String[] args) {
@@ -42,26 +32,26 @@ public class tripController {
         }
     }
 
-    public Trip createTrip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
+    public Trip createTrip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, int price) {
         admin = new Trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations, isFullyBooked, category,
-                schedule, capacity);
-=======
-        public Trip createTrip (String tripID, String destination,float date, float time, String hostEmail,
-        int maxReservations, int minReservations){
-            admin = new Trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations);
->>>>>>>parent of e96b215(sun2)
-            return admin;
-        }
-=======
-    public trip createTrip(String tripID, String destination, float date, float time, String hostEmail,
-                           int maxReservations, int minReservations) {
-        admin = new trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations);
+                <<<<<<<HEAD
+        schedule, capacity, price);
         return admin;
     }
->>>>>>> parent of e96b215 (sun2)
+=======
+    schedule,capacity);
+=======
 
-
+    public Trip createTrip(String tripID, String destination, float date, float time, String hostEmail,
+                           int maxReservations, int minReservations) {
+        admin = new Trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations);
+>>>>>>>parent of e96b215(sun2)
+        return admin;
     }
+>>>>>>>6f730d0dbda6b10bb6ba9cedcad17b09fdea15a7
+
+
+}
 
 
 
