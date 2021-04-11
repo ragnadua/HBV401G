@@ -11,7 +11,7 @@ public class Database {
     public Database() {
     }
 
-    public ArrayList<Trip> getTrip(){
+    public ArrayList<Trip> getTrip() {
         ArrayList<Trip> trips = new ArrayList<>();
         Trip.add(new Trip("Ísafjörður", "Hiking"));
         Trip.add(new Trip("Reykjavík", "Skiing"));
@@ -45,6 +45,14 @@ public class Database {
         trip.add(cat3);
         trip.add(cat4);
         return category;
+    }
+
+    public static void main(String[] args) {
+        int maxReservations = 30;
+        int minReservations = 10;
+        if (nmbRes = maxReservations) {
+            System.out.println("Is fully Booked");
+        }
     }
 
     public ObservableList<account> getAccounts() {

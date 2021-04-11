@@ -2,7 +2,7 @@ package myProject;
 
 public class tripController {
     private booking booking;
-    private trip tripOwner;
+    private trip admin;
 
 
     public tripController() {
@@ -10,20 +10,20 @@ public class tripController {
     }
 
     public tripController(trip trip) {
-        this.tripOwner = trip;
+        this.admin = trip;
     }
 
     public trip cancelTrip() {
         if (booking.nmbRes <= trip.minReservations) {
             System.out.println("Trip is canceled");
         }
-        return tripOwner;
+        return admin;
     }
 
     public trip createTrip(String tripID, String destination, float date, float time, String hostEmail,
                            int maxReservations, int minReservations) {
-        tripOwner = new trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations);
-        return tripOwner;
+        admin = new trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations);
+        return admin;
     }
 
 
