@@ -11,7 +11,7 @@ public class Database {
     public Database() {
     }
 
-    public ArrayList<Trip> getTrip(){
+    public ArrayList<Trip> getTrip() {
         ArrayList<Trip> trips = new ArrayList<>();
         Trip.add(new Trip("Ísafjörður", "Hiking"));
         Trip.add(new Trip("Reykjavík", "Skiing"));
@@ -87,6 +87,20 @@ public class Database {
     }*/
 
     public account getAccountByIDandPassword(String ID, String password) {
+        account account1 = new account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+        String ID2 = account1.getUserID();
+        String pw2 = account1.getPassword();
+        if (ID.equals(ID2) && password.equals(pw2))
+            return account1;
+        else return null;
+    }
+
+    public account getPaymentInfoByUserID(String ID) {
+        account payInfo1 = new account("2107002260", "03/10", "2222 3333 4444 5555", "131");
+
+    }
+
+    {
         account account1 = new account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
         String ID2 = account1.getUserID();
         String pw2 = account1.getPassword();

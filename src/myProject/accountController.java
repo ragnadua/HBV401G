@@ -13,7 +13,6 @@ public class accountController {
         this.accountUser = account;
     }
 
-
     public account newAccount(String userID, String firstName, String lastName, String password, String email,
                               String phoneNumber, paymentInfo payInfo, ArrayList cart) {
         accountUser = new account(userID, firstName, lastName, password, email, phoneNumber, payInfo, cart);

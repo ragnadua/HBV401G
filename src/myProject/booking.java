@@ -14,11 +14,9 @@ public class booking {
 
 
     public trip getTripUnit(trip t) {
-
     }
 
     public account getAccountUnit(account a) {
-
     }
 
     public float setPrice(float f) {
