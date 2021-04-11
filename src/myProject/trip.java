@@ -74,7 +74,7 @@ public class trip {
     }
 
     public void setMaxReservations(int minReservations) {
-        this.minReservations = minReservations;
+        this.minReservations = maxReservations;
     }
 
     public int getMinReservations() {
