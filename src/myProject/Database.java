@@ -47,14 +47,6 @@ public class Database {
         return category;
     }
 
-    public static void main(String[] args) {
-        int maxReservations = 30;
-        int minReservations = 10;
-        if (nmbRes = maxReservations) {
-            System.out.println("Is fully Booked");
-        }
-    }
-
     public ObservableList<Account> getAccounts() {
         //Create an empty Observable list that we will fill with data
         ObservableList<Account> accounts = FXCollections.observableArrayList();

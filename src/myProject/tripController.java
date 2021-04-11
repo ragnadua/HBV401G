@@ -23,6 +23,14 @@ public class TripController {
         return admin;
     }
 
+    public static void main(String[] args) {
+        int maxReservations = 30;
+        int minReservations = 10;
+        if (Booking.getNmbRes() == maxReservations) {
+            System.out.println("Is fully Booked");
+        }
+    }
+
     public Trip createTrip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
         admin = new Trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations, isFullyBooked, category,
                 schedule, capacity);

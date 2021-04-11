@@ -126,8 +126,4 @@ public class Trip {
         canceledTrip = true;
     }
 
-    public void printDetails() {
-        System.out.println(tripID + destination + date + time);
-    }
-
 }
