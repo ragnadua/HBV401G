@@ -14,10 +14,15 @@ public class Trip {
     private String category;
     private BufferedImage schedule;
     public int capacity;
+<<<<<<< HEAD
     private boolean canceledTrip;
     private int price;
 
     public Trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, int price) {
+=======
+
+    public Trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
+>>>>>>> 6f730d0dbda6b10bb6ba9cedcad17b09fdea15a7
         this.tripID = tripID;
         this.destination = destination;
         this.date = date;
@@ -120,6 +125,7 @@ public class Trip {
         this.capacity = capacity;
     }
 
+<<<<<<< HEAD
     public int getPrice() {
         return price;
     }
@@ -127,6 +133,9 @@ public class Trip {
     public void setPrice(int Price) {
         this.price = Price;
     }
+=======
+<<<<<<<HEAD
+>>>>>>> 6f730d0dbda6b10bb6ba9cedcad17b09fdea15a7
 
     public boolean isCanceledTrip() {
         return canceledTrip;
@@ -134,7 +143,15 @@ public class Trip {
 
     public void cancelTrip() {
         canceledTrip = true;
-    }
+=======
+        public void printDetails () {
+            System.out.println(tripID + destination + date + time);
+>>>>>>>parent of e96b215(sun2)
+        }
 
+<<<<<<< HEAD
 
 }
+=======
+    }
+>>>>>>> 6f730d0dbda6b10bb6ba9cedcad17b09fdea15a7
