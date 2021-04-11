@@ -95,8 +95,8 @@ public class Database {
         else return null;
     }
 
-    public Account getPaymentInfoByUserID(String ID) {
-        Account payInfo1 = new Account("2107002260", "03/10", "2222 3333 4444 5555", "131");
+    public PaymentInfo getPaymentInfoByUserID(String ID) {
+        PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", "131");
 
     }
 
