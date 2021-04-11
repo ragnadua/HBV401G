@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 
-public class AccountControllerTester {
+public class accountControllerTester {
     private Account accountDB;
     private AccountController accountController;
 
