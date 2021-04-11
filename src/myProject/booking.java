@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Booking {
     private trip tripUnit;
-    private account accountUnit;
+    private Account accountUnit;
     private Boolean pickUp;
     private float price;
     private float discount;
@@ -16,7 +16,7 @@ public class Booking {
     public trip getTripUnit(trip t) {
     }
 
-    public account getAccountUnit(account a) {
+    public Account getAccountUnit(Account a) {
     }
 
     public float setPrice(float f) {

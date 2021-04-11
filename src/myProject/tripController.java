@@ -1,15 +1,15 @@
 package myProject;
 
-public class tripController {
+public class TripController {
     private booking booking;
     private trip admin;
 
 
-    public tripController() {
+    public TripController() {
 
     }
 
-    public tripController(trip trip) {
+    public TripController(trip trip) {
         this.admin = trip;
     }
 

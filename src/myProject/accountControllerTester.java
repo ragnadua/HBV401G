@@ -9,17 +9,20 @@ import static org.junit.Assert.fail;
 
 
 public class accountControllerTester {
-<<<<<<< HEAD
+<<<<<<<HEAD
     private Account accountDB;
     private AccountController accountController;
 =======
-    private account accountDB;
-    private accountController accountController;
->>>>>>> parent of e96b215 (sun2)
+    private Account accountDB;
+    private AccountController accountController;
+>>>>>>>
+    parent of
+
+    e96b215(sun2)
 
     @Before
     public void setUp() {
-        accountDB = new account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", null, null);
+        accountDB = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", null, null);
     }
 
     @After
@@ -51,7 +54,7 @@ public class accountControllerTester {
         assertEquals(accountController.newAccount("", "", "", "",
                 "", "", null, null), accountDB);
         fail("Ekkert slegid inn");
-        
+
     }
 
 

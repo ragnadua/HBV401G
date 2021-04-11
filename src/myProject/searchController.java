@@ -3,7 +3,7 @@ package myProject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class searchController {
+public class SearchController {
     private Database DB; // Þarf ég ekki að kalla allt í Database eða á ég að kalla allt í trip?
 
     // Er þetta ekki hér?
