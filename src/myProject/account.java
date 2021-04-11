@@ -2,18 +2,18 @@ package myProject;
 
 import java.util.ArrayList;
 
-public class Account {
+public class account {
     private String userID;
     private String firstName;
     private String lastName;
     private String password;
     private String email;
     private String phoneNumber;
-    private PaymentInfo payInfo = new PaymentInfo();
+    private paymentInfo payInfo = new paymentInfo();
     private ArrayList cart;
 
 
-    public Account(String userID, String firstName, String lastName, String password, String email, String phoneNumber, PaymentInfo payInfo, ArrayList cart) {
+    public account(String userID, String firstName, String lastName, String password, String email, String phoneNumber, paymentInfo payInfo, ArrayList cart) {
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -74,11 +74,11 @@ public class Account {
         this.phoneNumber = phoneNumber;
     }
 
-    public PaymentInfo getPayInfo() {
+    public paymentInfo getPayInfo() {
         return payInfo;
     }
 
-    public void setPayInfo(PaymentInfo payInfo) {
+    public void setPayInfo(paymentInfo payInfo) {
         this.payInfo = payInfo;
     }
 

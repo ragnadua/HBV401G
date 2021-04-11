@@ -8,13 +8,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 
-public class AccountControllerTester {
-    private Account accountDB;
-    private AccountController accountController;
+public class accountControllerTester {
+    private account accountDB;
+    private accountController accountController;
 
     @Before
     public void setUp() {
-        accountDB = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", null, null);
+        accountDB = new account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", null, null);
     }
 
     @After
@@ -46,7 +46,7 @@ public class AccountControllerTester {
         assertEquals(accountController.newAccount("", "", "", "",
                 "", "", null, null), accountDB);
         fail("Ekkert slegid inn");
-
+        
     }
 
 
