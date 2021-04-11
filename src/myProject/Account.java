@@ -31,7 +31,6 @@ public class Account {
 
     public void setUserID(String userID) {
         this.userID = userID;
-        //gamalt: Get username pane content
     }
 
     public String getFirstName() {
