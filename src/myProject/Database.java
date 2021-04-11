@@ -12,7 +12,7 @@ public class Database {
     }
 
     public ArrayList<Trip> getTrip(){
-        ArrayList<Trip> trip = new ArrayList<>();
+        ArrayList<Trip> trips = new ArrayList<>();
         Trip.add(new Trip("Ísafjörður", "Hiking"));
         Trip.add(new Trip("Reykjavík", "Skiing"));
         Trip.add(new Trip("Ísafjörður", "City tour"));

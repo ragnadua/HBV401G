@@ -1,13 +1,14 @@
 package myProject;
 
 public class Search {
-    private trip trip;
+    private Database DB; // Þarf ég ekki að kalla allt í Database eða á ég að kalla allt í trip?
 
     public String searchDestination(String dest) {
-        if (dest == trip.getDestination()) {
+        // Veit ekki alveg hvernig á að framkvæma þetta
+        if (dest == DB.getDestination()) {
 
         }
-        /*if (trip.isFullyBooked() == true)
+        /*if (DB.isFullyBooked() == true)
             return null;
         if (!searchDestination(dest))
             return null;
@@ -15,7 +16,7 @@ public class Search {
     }
 
     public String searchCategory(String category) {
-        category = trip.getCategory();
+        category = DB.getCategory();
         return category;
         if (!searchCategory(category)) {
             return null;
@@ -23,7 +24,7 @@ public class Search {
     }
 
     public float searchDate(float date) {
-        date = trip.getDate();
+        date = DB.getDate();
         return date;
         if (!searchDate(date)) {
             return null;
@@ -31,7 +32,7 @@ public class Search {
     }
 
     public flot searchTime(float time) {
-        time = trip.getTime();
+        time = DB.getTime();
         return time;
         if (!searchTime(time)) {
             return null;
