@@ -1,54 +1,30 @@
 package myProject;
 
-import java.awt.image.BufferedImage;
-
-public class TripController {
-    private Booking booking;
-    private Trip admin;
+public class tripController {
+    private booking booking;
+    private trip admin;
 
 
-    public TripController() {
+    public tripController() {
 
     }
 
-    public TripController(Trip trip) {
+    public tripController(trip trip) {
         this.admin = trip;
     }
 
-    public Trip cancelTrip() {
-        if (booking.getNmbRes() <= Trip.getMinReservations) {
-            System.out.println("Trip is canceled");
+    public trip cancelTrip() {
+        if (booking.nmbRes <= trip.minReservations) {
+            System.out.println("Trip is canceledd");
         }
         return admin;
     }
 
-<<<<<<<HEAD
-
-    public static void main(String[] args) {
-        int maxReservations = 30;
-        int minReservations = 10;
-        if (Booking.getNmbRes() == maxReservations) {
-            System.out.println("Is fully Booked");
-        }
-    }
-
-    public Trip createTrip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, int price) {
-        admin = new Trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations, isFullyBooked, category,
-                <<<<<<<HEAD
-        schedule, capacity, price);
-        return admin;
-    }
-=======
-    schedule,capacity);
-=======
-
-    public Trip createTrip(String tripID, String destination, float date, float time, String hostEmail,
+    public trip createTrip(String tripID, String destination, float date, float time, String hostEmail,
                            int maxReservations, int minReservations) {
-        admin = new Trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations);
->>>>>>>parent of e96b215(sun2)
+        admin = new trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations);
         return admin;
     }
->>>>>>>6f730d0dbda6b10bb6ba9cedcad17b09fdea15a7
 
 
 }
