@@ -7,23 +7,42 @@ public class paymentInfo {
     private String cardNumber;
     private int ccv;
 
-    public String setUserID(String s) {
-        s = userID;
-        return s;
+    public paymentInfo(String userID, String expDate, String cardNumber, int ccv) {
+        this.userID = userID;
+        this.expDate = expDate;
+        this.cardNumber = cardNumber;
+        this.ccv = ccv;
     }
 
-    public String setExpDate(String s) {
-        s = expDate;
-        return s;
+    public String getUserID() {
+        return userID;
     }
 
-    public String setCardNumber(String s) {
-        s = cardNumber;
-        return s;
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
-    public int setCCV(int t) {
-        t = ccv;
-        return t;
+    public String getExpDate() {
+        return expDate;
+    }
+
+    public void setExpDate(String expDate) {
+        this.expDate = expDate;
+    }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    public int getCcv() {
+        return ccv;
+    }
+
+    public void setCcv(int ccv) {
+        this.ccv = ccv;
     }
 }
