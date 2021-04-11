@@ -2,7 +2,7 @@ package myProject;
 
 import java.awt.image.BufferedImage;
 
-public class trip {
+public class Trip {
     private String tripID;
     private String destination;
     private float date;
@@ -14,8 +14,9 @@ public class trip {
     private String category;
     private BufferedImage schedule;
     public int capacity;
+    private boolean canceledTrip;
 
-    public trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
+    public Trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
         this.tripID = tripID;
         this.destination = destination;
         this.date = date;
@@ -115,6 +116,14 @@ public class trip {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public boolean isCanceledTrip() {
+        return canceledTrip;
+    }
+
+    public void cancelTrip() {
+        canceledTrip = true;
     }
 
     public void printDetails() {

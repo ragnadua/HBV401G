@@ -2,9 +2,9 @@ package myProject;
 
 import java.util.ArrayList;
 
-public class booking {
-    private trip tripUnit;
-    private account accountUnit;
+public class Booking {
+    private Trip tripUnit;
+    private Account accountUnit;
     private Boolean pickUp;
     private float price;
     private float discount;
@@ -13,10 +13,10 @@ public class booking {
     private ArrayList passList;
 
 
-    public trip getTripUnit(trip t) {
+    public Trip getTripUnit(Trip t) {
     }
 
-    public account getAccountUnit(account a) {
+    public Account getAccountUnit(Account a) {
     }
 
     public float setPrice(float f) {

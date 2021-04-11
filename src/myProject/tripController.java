@@ -1,28 +1,31 @@
 package myProject;
 
-public class tripController {
-    private booking booking;
-    private trip admin;
+import java.awt.image.BufferedImage;
+
+public class TripController {
+    private Booking booking;
+    private Trip admin;
 
 
-    public tripController() {
+    public TripController() {
 
     }
 
-    public tripController(trip trip) {
+    public TripController(Trip trip) {
         this.admin = trip;
     }
 
-    public trip cancelTrip() {
-        if (booking.nmbRes <= trip.minReservations) {
+    public Trip cancelTrip() {
+        if (booking.getNmbRes() <= admin.getMinReservations()) {
+            admin.cancelTrip();
             System.out.println("Trip is canceled");
         }
         return admin;
     }
 
-    public trip createTrip(String tripID, String destination, float date, float time, String hostEmail,
-                           int maxReservations, int minReservations) {
-        admin = new trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations);
+    public Trip createTrip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
+        admin = new Trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations, isFullyBooked, category,
+                schedule, capacity);
         return admin;
     }
 
