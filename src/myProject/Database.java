@@ -18,53 +18,45 @@ public class Database {
         Trip.add(new Trip("Ísafjörður", "City tour"));
         Trip.add(new Trip("Eigilsstaðir", "Sailing"));
         Trip.add(new Trip("Akureyri", "City tour"));
-        return trip;
+        return Trip;
     }
 
-    public ObservableList<trip> getDestination() {
-        ObservableList<trip> destination = FXCollections.observableArrayList();
-        trip dest1 = new trip("Reykjavík");
-        trip dest2 = new trip("Akureyri");
-        trip dest3 = new trip("Ísafjörður");
-        trip dest4 = new trip("Egisstaðir");
-        trip.add(dest1);
-        trip.add(dest2);
-        trip.add(dest3);
-        trip.add(dest4);
+    public ObservableList<Trip> getDestination() {
+        ObservableList<Trip> destination = FXCollections.observableArrayList();
+        Trip dest1 = new Trip("Reykjavík");
+        Trip dest2 = new Trip("Akureyri");
+        Trip dest3 = new Trip("Ísafjörður");
+        Trip dest4 = new Trip("Egisstaðir");
+        Trip.add(dest1);
+        Trip.add(dest2);
+        Trip.add(dest3);
+        Trip.add(dest4);
         return destination;
     }
 
-    public ObservableList<trip> getCategory() {
-        ObservableList<trip> category = FXCollections.observableArrayList();
-        trip cat1 = new trip("Skiing");
-        trip cat2 = new trip("Hiking");
-        trip cat3 = new trip("City tour");
-        trip cat4 = new trip("Sailing");
-        trip.add(cat1);
-        trip.add(cat2);
-        trip.add(cat3);
-        trip.add(cat4);
+    public ObservableList<Trip> getCategory() {
+        ObservableList<Trip> category = FXCollections.observableArrayList();
+        Trip cat1 = new Trip("Skiing");
+        Trip cat2 = new Trip("Hiking");
+        Trip cat3 = new Trip("City tour");
+        Trip cat4 = new Trip("Sailing");
+        Trip.add(cat1);
+        Trip.add(cat2);
+        Trip.add(cat3);
+        Trip.add(cat4);
         return category;
     }
 
-    public static void main(String[] args) {
-        int maxReservations = 30;
-        int minReservations = 10;
-        if (nmbRes = maxReservations) {
-            System.out.println("Is fully Booked");
-        }
-    }
-
-    public ObservableList<account> getAccounts() {
+    public ObservableList<Account> getAccounts() {
         //Create an empty Observable list that we will fill with data
-        ObservableList<account> accounts = FXCollections.observableArrayList();
-        account account1 = new account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+        ObservableList<Account> accounts = FXCollections.observableArrayList();
+        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
 
 
         //ArrayList<trip> trips = getTrip(); //Get available books
 
         // Set up reservations for each user using the available books
-        ArrayList<booking> bookings1 = new ArrayList<>(); //Empty reservation list to be filled
+        ArrayList<Booking> bookings1 = new ArrayList<>(); //Empty reservation list to be filled
         // books.get(0) Gets the 0th entry (e.g. The Great Gatsby) and .getID() gets that books ID.
         // similar for user
         // bookings1.add(new booking(trips.get(0), account1));
@@ -94,8 +86,8 @@ public class Database {
         return trips;
     }*/
 
-    public account getAccountByIDandPassword(String ID, String password) {
-        account account1 = new account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+    public Account getAccountByIDandPassword(String ID, String password) {
+        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
         String ID2 = account1.getUserID();
         String pw2 = account1.getPassword();
         if (ID.equals(ID2) && password.equals(pw2))
@@ -103,13 +95,13 @@ public class Database {
         else return null;
     }
 
-    public account getPaymentInfoByUserID(String ID) {
-        account payInfo1 = new account("2107002260", "03/10", "2222 3333 4444 5555", "131");
+    public Account getPaymentInfoByUserID(String ID) {
+        Account payInfo1 = new Account("2107002260", "03/10", "2222 3333 4444 5555", "131");
 
     }
 
     {
-        account account1 = new account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
         String ID2 = account1.getUserID();
         String pw2 = account1.getPassword();
         if (ID.equals(ID2) && password.equals(pw2))
@@ -117,7 +109,7 @@ public class Database {
         else return null;
     }
 
-    public trip getTripByDestination(String d) {
+    public Trip getTripByDestination(String d) {
         if (d == trip1.getDestination())
             return trip1;
         else if (d == trip2.getDestination())
@@ -130,7 +122,7 @@ public class Database {
             System.out.println("Not avalible");
     }
 
-    public trip getTripByCategory(String c) {
+    public Trip getTripByCategory(String c) {
         if (c == trip1.getCategory())
             return trip1;
         else if (c == trip2.getCategory())
