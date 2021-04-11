@@ -15,7 +15,7 @@ public class tripController {
 
     public trip cancelTrip() {
         if (booking.nmbRes <= trip.minReservations) {
-            System.out.println("Trip is canceled");
+            System.out.println("Trip is canceledd");
         }
         return admin;
     }
