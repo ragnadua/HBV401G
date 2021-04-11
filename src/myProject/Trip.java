@@ -14,8 +14,9 @@ public class Trip {
     private String category;
     private BufferedImage schedule;
     public int capacity;
+    private boolean canceledTrip;
 
-    public trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity) {
+    public Trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip) {
         this.tripID = tripID;
         this.destination = destination;
         this.date = date;
@@ -27,6 +28,7 @@ public class Trip {
         this.category = category;
         this.schedule = schedule;
         this.capacity = capacity;
+        this.canceledTrip = canceledTrip;
     }
 
     public String getTripID() {
@@ -117,8 +119,12 @@ public class Trip {
         this.capacity = capacity;
     }
 
-    public void printDetails() {
-        System.out.println(tripID + destination + date + time);
+    public boolean isCanceledTrip() {
+        return canceledTrip;
+    }
+
+    public void cancelTrip() {
+        canceledTrip = true;
     }
 
 }
