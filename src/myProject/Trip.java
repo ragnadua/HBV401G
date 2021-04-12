@@ -138,4 +138,13 @@ public class Trip {
         this.price = price;
 
     }
+
+    //Athuga
+    public void fullyBooked() {
+        if (booking.getNmbRes() == getMaxReservations()) {
+            isFullyBooked() = true;
+            System.out.println("Is fully Booked");
+        }
+    }
+
 }
