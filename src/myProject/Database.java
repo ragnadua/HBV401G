@@ -5,6 +5,7 @@ package myProject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Database {
@@ -20,6 +21,9 @@ public class Database {
         Trip.add(new Trip("Akureyri", "City tour"));
         return Trip;
     }
+
+    public ArrayList<Trip> getTrip(LocalDate);
+
 
     public ObservableList<Trip> getDestination() {
         ObservableList<Trip> destination = FXCollections.observableArrayList();
@@ -171,5 +175,5 @@ public class Database {
         else if (c == trip4.getCategory())
             return trip4;
     }
-
+}
 }

@@ -138,4 +138,5 @@ public class Trip {
         this.price = price;
 
     }
+
 }
