@@ -1,22 +1,26 @@
 package myProject;
 
 public class Search {
-    private Database DB; // Þarf ég ekki að kalla allt í Database eða á ég að kalla allt í trip?
+    private Trip trip;
 
-    public String searchDestination(String dest) {
+    public Search(Trip trip) {
+        this.trip = trip;
+    }
+
+    public Trip searchDestination(Trip dest) {
         // Veit ekki alveg hvernig á að framkvæma þetta
-        if (dest == DB.getDestination()) {
+        if (dest == trip.getDestination()) {
 
         }
-        /*if (DB.isFullyBooked() == true)
+        if (trip.isFullyBooked() == true)
             return null;
         if (!searchDestination(dest))
             return null;
-        return dest;*/
+        return dest;
     }
 
-    public String searchCategory(String category) {
-        category = DB.getCategory();
+    public Trip searchCategory(Trip category) {
+        category = trip.getCategory();
         return category;
         if (!searchCategory(category)) {
             return null;
