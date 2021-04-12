@@ -3,7 +3,7 @@ package myProject;
 public class Search {
     private Database DB;
 
-    public Trip searchDestination(Trip dest) {
+    public String searchDestination(String dest) {
         // Veit ekki alveg hvernig á að framkvæma þetta
         if (dest == DB.getDestination()) {
             return dest;
@@ -11,12 +11,12 @@ public class Search {
         return dest;
     }
 
-    public Database searchCategory(Database category) {
+    public String searchCategory(String category) {
         category = DB.getCategory();
         return category;
     }
 
-    public float searchDate(float date) {
+    public String searchDate(String date) {
         date = DB.getDate();
         return date;
         if (!searchDate(date)) {
@@ -24,7 +24,7 @@ public class Search {
         }
     }
 
-    public float searchTime(float time) {
+    public String searchTime(String time) {
         time = DB.getTime();
         return time;
         if (!searchTime(time)) {

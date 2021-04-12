@@ -6,8 +6,8 @@ import java.time.LocalDate;
 public class Trip {
     private String tripID;
     private String destination;
-    private LocalDate date;
-    private LocalDate time;
+    private String date;
+    private String time;
     private String hostEmail;
     private final int maxReservations = 30;
     private final int minReservations = 10;
@@ -27,7 +27,7 @@ public class Trip {
     }
 
 
-    public Trip(String tripID, String destination, LocalDate date, LocalDate time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
+    public Trip(String tripID, String destination, String date, String time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
         this.tripID = tripID;
         this.destination = destination;
         this.date = date;
@@ -59,19 +59,19 @@ public class Trip {
         this.destination = destination;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public LocalDate getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalDate time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
