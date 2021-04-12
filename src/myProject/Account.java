@@ -25,6 +25,10 @@ public class Account {
 
     }
 
+    public Account(String payInfo) {
+        this.payInfo = payInfo;
+    }
+
     public String getUserID() {
         return userID;
     }

@@ -52,7 +52,7 @@ public class Database {
         Trip dest1 = new Trip("Reykjavík");
         Trip dest2 = new Trip("Akureyri");
         Trip dest3 = new Trip("Ísafjörður");
-        Trip dest4 = new Trip("Egisstaðir");
+        Trip dest4 = new Trip("Egilsstaðir");
         destination.add(dest1);
         destination.add(dest2);
         destination.add(dest3);
@@ -86,12 +86,6 @@ public class Database {
     public PaymentInfo getPaymentInfoByUserID(String ID) {
         PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", "131");
         return PaymentInfo;
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
-        String ID2 = account1.getUserID();
-        String pw2 = account1.getPassword();
-        if (ID.equals(ID2) && password.equals(pw2))
-            return account1;
-        else return null;
     }
 
 
@@ -104,14 +98,10 @@ public class Database {
         else return null;
     }
 
-    public Account getPaymentInfoByUserID(String ID) {
+    /// Vitlaust, þarf að laga
+    public Account getPaymentInfoByUserID(String payInfo) {
         Account payInfo1 = new Account("2107002260", "03/10", "2222 3333 4444 5555", "131");
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
-        String ID2 = account1.getUserID();
-        String pw2 = account1.getPassword();
-        if (ID.equals(ID2) && password.equals(pw2))
-            return account1;
-        else return null;
+
     }
 
     public Trip getTripByDestination(String d) {
@@ -128,13 +118,15 @@ public class Database {
     }
 
     public Trip getTripByCategory(String c) {
-        if (c == trip1.getCategory())
-            return trip1;
-        else if (c == trip2.getCategory())
-            return trip2;
-        else if (c == trip3.getCategory())
-            return trip3;
-        else if (c == trip4.getCategory())
-            return trip4;
+        if (c == cat1.getCategory())
+            return cat1;
+        else if (c == cat2.getCategory())
+            return cat2;
+        else if (c == cat3.getCategory())
+            return cat3;
+        else if (c == cat4.getCategory())
+            return cat4;
+        else
+            System.out.println("Not avalable");
     }
 }
