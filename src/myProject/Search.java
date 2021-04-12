@@ -1,12 +1,8 @@
 package myProject;
 
 public class Search {
-    private Trip trip;
-
-    public Search(Trip trip) {
-        this.trip = trip;
-    }
-
+    private Database DB;
+    
     public Trip searchDestination(Trip dest) {
         // Veit ekki alveg hvernig á að framkvæma þetta
         if (dest == trip.getDestination()) {
