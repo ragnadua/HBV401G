@@ -35,7 +35,7 @@ public class Search {
         }
     }
 
-    public flot searchTime(float time) {
+    public float searchTime(float time) {
         time = DB.getTime();
         return time;
         if (!searchTime(time)) {

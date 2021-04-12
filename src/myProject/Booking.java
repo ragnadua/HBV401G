@@ -43,7 +43,6 @@ public class Booking {
 
     public Boolean setPaymentConfirmed(boolean b) {
         b = paymentConfirmed;
-        if ()
     }
 
     public Boolean setPickUp() {

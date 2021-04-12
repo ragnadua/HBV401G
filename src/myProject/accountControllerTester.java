@@ -9,16 +9,10 @@ import static org.junit.Assert.fail;
 
 
 public class accountControllerTester {
-<<<<<<<HEAD
-    private Account accountDB;
-    private AccountController accountController;
-=======
-    private Account accountDB;
-    private AccountController accountController;
->>>>>>>
-    parent of
 
-    e96b215(sun2)
+    private Account accountDB;
+    private AccountController accountController;
+
 
     @Before
     public void setUp() {
@@ -28,6 +22,7 @@ public class accountControllerTester {
     @After
     public void tearDown() {
         accountDB = null;
+
     }
 
     @Test

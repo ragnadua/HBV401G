@@ -5,9 +5,6 @@ import java.util.ArrayList;
 public class AccountController {
     private Account accountUser;
 
-    public AccountController() {
-
-    }
 
     public AccountController(Account account) {
         this.accountUser = account;
