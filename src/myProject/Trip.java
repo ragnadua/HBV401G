@@ -1,12 +1,13 @@
 package myProject;
 
 import java.awt.image.BufferedImage;
+import java.time.LocalDate;
 
 public class Trip {
     private String tripID;
     private String destination;
-    private float date;
-    private float time;
+    private LocalDate date;
+    private LocalDate time;
     private String hostEmail;
     private final int maxReservations = 30;
     private final int minReservations = 10;
@@ -17,8 +18,16 @@ public class Trip {
     private boolean canceledTrip;
     private int price;
 
+    public Trip(String destination) {
+        this.destination = destination;
+    }
 
-    public Trip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
+    public Trip(String destination, String category, LocalDate date, LocalDate time) {
+        this.destination = destination;
+    }
+
+
+    public Trip(String tripID, String destination, LocalDate date, LocalDate time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
         this.tripID = tripID;
         this.destination = destination;
         this.date = date;
@@ -50,19 +59,19 @@ public class Trip {
         this.destination = destination;
     }
 
-    public float getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(float date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
-    public float getTime() {
+    public LocalDate getTime() {
         return time;
     }
 
-    public void setTime(float time) {
+    public void setTime(LocalDate time) {
         this.time = time;
     }
 

@@ -13,17 +13,28 @@ public class Database {
     }
 
     public ArrayList<Trip> getTrip() {
-        ArrayList<Trip> Trip = new ArrayList<>();
-        Trip.add(new Trip("Ísafjörður", "Hiking"));
-        Trip.add(new Trip("Reykjavík", "Skiing"));
-        Trip.add(new Trip("Ísafjörður", "City tour"));
-        Trip.add(new Trip("Eigilsstaðir", "Sailing"));
-        Trip.add(new Trip("Akureyri", "City tour"));
-        return Trip;
+        ArrayList<Trip> trip = new ArrayList<>();
+        trip.add(new Trip("Ísafjörður", "Hiking", LocalDate.of(2021, 8, 8), time));
+        trip.add(new Trip("Reykjavík", "Skiing", LocalDate.of(2021, 8, 8), time));
+        trip.add(new Trip("Ísafjörður", "City tour", LocalDate.of(2021, 8, 8), time));
+        trip.add(new Trip("Eigilsstaðir", "Sailing", LocalDate.of(2021, 8, 8), time));
+        trip.add(new Trip("Akureyri", "City tour", LocalDate.of(2021, 8, 8), time));
+        return trip;
     }
 
-    public ArrayList<Trip> getTrip(LocalDate);
+    public ObservableList<Trip> getDate() {
+        ObservableList<Trip> date = FXCollections.observableArrayList();
+        Trip date1 = new Trip(LocalDate.of(2021, 8, 8));
+        Trip date2 = new Trip(LocalDate.of(2021, 8, 8));
+        Trip date3 = new Trip(LocalDate.of(2021, 8, 8));
+        Trip date4 = new Trip(LocalDate.of(2021, 8, 8));
+        date.add(date1);
+        date.add(date2);
+        date.add(date3);
+        date.add(date4);
+        return date;
 
+    }
 
     public ObservableList<Trip> getDestination() {
         ObservableList<Trip> destination = FXCollections.observableArrayList();
