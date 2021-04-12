@@ -5,7 +5,6 @@ package myProject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Database {
@@ -14,10 +13,10 @@ public class Database {
 
     public ArrayList<Trip> getTrip() {
         ArrayList<Trip> trip = new ArrayList<>();
-        trip.add(new Trip("Ísafjörður", "Hiking", LocalDate.of(2021, 8, 8), time));
-        trip.add(new Trip("Reykjavík", "City tour", LocalDate.of(2021, 8, 8), time));
-        trip.add(new Trip("Ísafjörður", "City tour", LocalDate.of(2021, 8, 8), time));
-        trip.add(new Trip("Eigilsstaðir", "Sailing", LocalDate.of(2021, 8, 8), time));
+        trip.add(new Trip("Ísafjörður", "Hiking", "2021, 8, 8", "08:00"));
+        trip.add(new Trip("Reykjavík", "City tour", "2021, 8, 8", "12:00"));
+        trip.add(new Trip("Ísafjörður", "City tour", "2021, 8, 8", "16:00"));
+        trip.add(new Trip("Eigilsstaðir", "Sailing", "2021, 8, 82", "16:00"));
         trip.add(new Trip("Akureyri", "Skiing", "2021, 8, 8", "08:00"));
         return trip;
     }

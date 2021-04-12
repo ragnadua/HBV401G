@@ -1,7 +1,6 @@
 package myProject;
 
 import java.awt.image.BufferedImage;
-import java.time.LocalDate;
 
 public class Trip {
     private String tripID;
@@ -22,7 +21,7 @@ public class Trip {
         this.destination = destination;
     }
 
-    public Trip(String destination, String category, LocalDate date, LocalDate time) {
+    public Trip(String destination, String category, String date, String time) {
         this.destination = destination;
     }
 
