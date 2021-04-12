@@ -97,8 +97,8 @@ public class Database {
         else return null;
     }
 
-    public PaymentInfo getPaymentInfoByUserID(String ID) {
-        PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", "131");
+    public PaymentInfo getPaymentInfoByUserID(String ID, String expDate, String cardNumber, int ccv) {
+        PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", 133);
         return PaymentInfo;
 
     }
