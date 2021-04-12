@@ -1,6 +1,6 @@
 package myProject;
 
-public class paymentInfo {
+public class PaymentInfo {
 
     private String userID;
     private String expDate;
