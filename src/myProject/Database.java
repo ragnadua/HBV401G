@@ -13,7 +13,7 @@ public class Database {
     }
 
     public ArrayList<Trip> getTrip() {
-        ArrayList<Trip> trips = new ArrayList<>();
+        ArrayList<Trip> Trip = new ArrayList<>();
         Trip.add(new Trip("Ísafjörður", "Hiking"));
         Trip.add(new Trip("Reykjavík", "Skiing"));
         Trip.add(new Trip("Ísafjörður", "City tour"));
@@ -31,10 +31,10 @@ public class Database {
         Trip dest2 = new Trip("Akureyri");
         Trip dest3 = new Trip("Ísafjörður");
         Trip dest4 = new Trip("Egisstaðir");
-        Trip.add(dest1);
-        Trip.add(dest2);
-        Trip.add(dest3);
-        Trip.add(dest4);
+        destination.add(dest1);
+        destination.add(dest2);
+        destination.add(dest3);
+        destination.add(dest4);
         return destination;
     }
 
@@ -44,10 +44,10 @@ public class Database {
         Trip cat2 = new Trip("Hiking");
         Trip cat3 = new Trip("City tour");
         Trip cat4 = new Trip("Sailing");
-        Trip.add(cat1);
-        Trip.add(cat2);
-        Trip.add(cat3);
-        Trip.add(cat4);
+        category.add(cat1);
+        category.add(cat2);
+        category.add(cat3);
+        category.add(cat4);
         return category;
     }
 
@@ -85,18 +85,6 @@ public class Database {
             else return null;
         }
 
-        public Trip getTripByDestination (String d){
-            if (d == trip1.getDestination())
-                return trip1;
-            else if (d == trip2.getDestination())
-                return trip2;
-            else if (d == trip3.getDestination())
-                return trip3;
-            else if (d == trip4.getDestination())
-                return trip4;
-            else
-                System.out.println("Not avalible");
-        }
 
         public Account getAccountByIDandPassword (String ID, String password){
             Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
@@ -122,14 +110,14 @@ public class Database {
         }
 
         public Trip getTripByDestination (String d){
-            if (d == trip1.getDestination())
-                return trip1;
-            else if (d == trip2.getDestination())
-                return trip2;
-            else if (d == trip3.getDestination())
-                return trip3;
-            else if (d == trip4.getDestination())
-                return trip4;
+            if (d == dest1.getDestination())
+                return dest1;
+            else if (d == dest2.getDestination())
+                return dest2;
+            else if (d == dest3.getDestination())
+                return dest3;
+            else if (d == dest4.getDestination())
+                return dest4;
             else
                 System.out.println("Not avalible");
         }
