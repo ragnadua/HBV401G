@@ -58,122 +58,91 @@ public class Database {
         Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
 
 
-        //ArrayList<trip> trips = getTrip(); //Get available books
-
-        // Set up reservations for each user using the available books
-        ArrayList<Booking> bookings1 = new ArrayList<>(); //Empty reservation list to be filled
-        // books.get(0) Gets the 0th entry (e.g. The Great Gatsby) and .getID() gets that books ID.
-        // similar for user
-        // bookings1.add(new booking(trips.get(0), account1));
-
-        //account1.setCart(bookings1);
-
-        // Do the same for the 2nd user
-        //ArrayList<Reservation> reservations2 = new ArrayList<>(); //Empty reservation list to be filled
-        // books.get(0) Gets the 0th entry (e.g. The Great Gatsby) and .getID() gets that books ID.
-        // similar for user
-        //reservations2.add(new Reservation(books.get(2), user1));
-        //user2.setReservations(reservations2);
-
-        /*ArrayList<Reservation> reservations3 = new ArrayList<>();
-        reservations3.add(new Reservation(books.get(1), user3));
-        user3.setReservations(reservations3);*/
-
-        // Now we have books available, reservations and users.
-        Accounts.add(account1);
-        return Accounts;
+        ArrayList<Booking> bookings1 = new ArrayList<>();
 
 
+        public Account getAccountByIDandPassword (String ID, String password){
+            Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+            String ID2 = account1.getUserID();
+            String pw2 = account1.getPassword();
+            if (ID.equals(ID2) && password.equals(pw2))
+                return account1;
+            else return null;
+        }
+
+        public PaymentInfo getPaymentInfoByUserID (String ID){
+            PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", "131");
+            return PaymentInfo;
+
+        }
+
+        {
+            Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+            String ID2 = account1.getUserID();
+            String pw2 = account1.getPassword();
+            if (ID.equals(ID2) && password.equals(pw2))
+                return account1;
+            else return null;
+        }
+
+        public Trip getTripByDestination (String d){
+            if (d == trip1.getDestination())
+                return trip1;
+            else if (d == trip2.getDestination())
+                return trip2;
+            else if (d == trip3.getDestination())
+                return trip3;
+            else if (d == trip4.getDestination())
+                return trip4;
+            else
+                System.out.println("Not avalible");
+        }
+
+        public Account getAccountByIDandPassword (String ID, String password){
+            Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+            String ID2 = account1.getUserID();
+            String pw2 = account1.getPassword();
+            if (ID.equals(ID2) && password.equals(pw2))
+                return account1;
+            else return null;
+        }
+
+        public Account getPaymentInfoByUserID (String ID){
+            Account payInfo1 = new Account("2107002260", "03/10", "2222 3333 4444 5555", "131");
+
+        }
+
+        {
+            Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+            String ID2 = account1.getUserID();
+            String pw2 = account1.getPassword();
+            if (ID.equals(ID2) && password.equals(pw2))
+                return account1;
+            else return null;
+        }
+
+        public Trip getTripByDestination (String d){
+            if (d == trip1.getDestination())
+                return trip1;
+            else if (d == trip2.getDestination())
+                return trip2;
+            else if (d == trip3.getDestination())
+                return trip3;
+            else if (d == trip4.getDestination())
+                return trip4;
+            else
+                System.out.println("Not avalible");
+        }
+
+        public Trip getTripByCategory (String c){
+            if (c == trip1.getCategory())
+                return trip1;
+            else if (c == trip2.getCategory())
+                return trip2;
+            else if (c == trip3.getCategory())
+                return trip3;
+            else if (c == trip4.getCategory())
+                return trip4;
+        }
     }
-
-    /*private ArrayList<trip> getTrip() {
-        ArrayList<trip> trips = new ArrayList<>();
-        return trips;
-    }*/
-
-
-    public Account getAccountByIDandPassword(String ID, String password) {
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
-        String ID2 = account1.getUserID();
-        String pw2 = account1.getPassword();
-        if (ID.equals(ID2) && password.equals(pw2))
-            return account1;
-        else return null;
-    }
-
-    public PaymentInfo getPaymentInfoByUserID(String ID) {
-        PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", "131");
-        return PaymentInfo;
-
-    }
-
-    {
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
-        String ID2 = account1.getUserID();
-        String pw2 = account1.getPassword();
-        if (ID.equals(ID2) && password.equals(pw2))
-            return account1;
-        else return null;
-    }
-
-    public Trip getTripByDestination(String d) {
-        if (d == trip1.getDestination())
-            return trip1;
-        else if (d == trip2.getDestination())
-            return trip2;
-        else if (d == trip3.getDestination())
-            return trip3;
-        else if (d == trip4.getDestination())
-            return trip4;
-        else
-            System.out.println("Not avalible");
-    }
-
-    public Account getAccountByIDandPassword(String ID, String password) {
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
-        String ID2 = account1.getUserID();
-        String pw2 = account1.getPassword();
-        if (ID.equals(ID2) && password.equals(pw2))
-            return account1;
-        else return null;
-    }
-
-    public Account getPaymentInfoByUserID(String ID) {
-        Account payInfo1 = new Account("2107002260", "03/10", "2222 3333 4444 5555", "131");
-
-    }
-
-    {
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
-        String ID2 = account1.getUserID();
-        String pw2 = account1.getPassword();
-        if (ID.equals(ID2) && password.equals(pw2))
-            return account1;
-        else return null;
-    }
-
-    public Trip getTripByDestination(String d) {
-        if (d == trip1.getDestination())
-            return trip1;
-        else if (d == trip2.getDestination())
-            return trip2;
-        else if (d == trip3.getDestination())
-            return trip3;
-        else if (d == trip4.getDestination())
-            return trip4;
-        else
-            System.out.println("Not avalible");
-    }
-
-    public Trip getTripByCategory(String c) {
-        if (c == trip1.getCategory())
-            return trip1;
-        else if (c == trip2.getCategory())
-            return trip2;
-        else if (c == trip3.getCategory())
-            return trip3;
-        else if (c == trip4.getCategory())
-            return trip4;
-    }
-}
 }
