@@ -9,11 +9,11 @@ public class Account {
     private String password;
     private String email;
     private String phoneNumber;
-    private paymentInfo payInfo = new paymentInfo();
+    private PaymentInfo payInfo = new PaymentInfo(); //meikar þetta sens hér?
     private ArrayList cart;
 
 
-    public Account(String userID, String firstName, String lastName, String password, String email, String phoneNumber, paymentInfo payInfo, ArrayList cart) {
+    public Account(String userID, String firstName, String lastName, String password, String email, String phoneNumber, PaymentInfo payInfo, ArrayList cart) {
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -73,11 +73,11 @@ public class Account {
         this.phoneNumber = phoneNumber;
     }
 
-    public paymentInfo getPayInfo() {
+    public PaymentInfo getPayInfo() {
         return payInfo;
     }
 
-    public void setPayInfo(paymentInfo payInfo) {
+    public void setPayInfo(PaymentInfo payInfo) {
         this.payInfo = payInfo;
     }
 
