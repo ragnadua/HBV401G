@@ -8,8 +8,8 @@ public class Trip {
     private float date;
     private float time;
     private String hostEmail;
-    private int maxReservations = 30;
-    private int minReservations = 10;
+    private final int maxReservations = 30;
+    private final int minReservations = 10;
     private boolean isFullyBooked;
     private String category;
     private BufferedImage schedule;
