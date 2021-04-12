@@ -3,7 +3,7 @@ package myProject;
 import java.util.ArrayList;
 
 public class Booking {
-    private trip tripUnit;
+    private Trip tripUnit;
     private Account accountUnit;
     private Boolean pickUp;
     private float price;
@@ -13,7 +13,7 @@ public class Booking {
     private ArrayList passList;
 
 
-    public trip getTripUnit(trip t) {
+    public Trip getTripUnit(Trip t) {
     }
 
     public Account getAccountUnit(Account a) {
@@ -37,7 +37,7 @@ public class Booking {
         return nmbRes;
     }
 
-    private String addToPassList() {
+    private void addToPassList() {
 
     }
 

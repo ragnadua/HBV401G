@@ -2,7 +2,7 @@ package myProject;
 
 import java.util.ArrayList;
 
-public class account {
+public class Account {
     private String userID;
     private String firstName;
     private String lastName;
@@ -13,7 +13,7 @@ public class account {
     private ArrayList cart;
 
 
-    public account(String userID, String firstName, String lastName, String password, String email, String phoneNumber, paymentInfo payInfo, ArrayList cart) {
+    public Account(String userID, String firstName, String lastName, String password, String email, String phoneNumber, paymentInfo payInfo, ArrayList cart) {
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
