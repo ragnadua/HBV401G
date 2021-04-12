@@ -2,25 +2,18 @@ package myProject;
 
 public class Search {
     private Database DB;
-    
+
     public Trip searchDestination(Trip dest) {
         // Veit ekki alveg hvernig á að framkvæma þetta
-        if (dest == trip.getDestination()) {
-
+        if (dest == DB.getDestination()) {
+            return dest;
         }
-        if (trip.isFullyBooked() == true)
-            return null;
-        if (!searchDestination(dest))
-            return null;
         return dest;
     }
 
-    public Trip searchCategory(Trip category) {
-        category = trip.getCategory();
+    public Database searchCategory(Database category) {
+        category = DB.getCategory();
         return category;
-        if (!searchCategory(category)) {
-            return null;
-        }
     }
 
     public float searchDate(float date) {
