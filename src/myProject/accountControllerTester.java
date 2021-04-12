@@ -9,15 +9,8 @@ import static org.junit.Assert.fail;
 
 
 public class accountControllerTester {
-<<<<<<< HEAD
-
     private Account accountDB;
     private AccountController accountController;
-
-=======
-    private Account accountDB;
-    private AccountController accountController;
->>>>>>> 8da7a4c115447a642745e31a1f35b3e4d02fc14c
 
     @Before
     public void setUp() {
@@ -27,7 +20,6 @@ public class accountControllerTester {
     @After
     public void tearDown() {
         accountDB = null;
-
     }
 
     @Test
