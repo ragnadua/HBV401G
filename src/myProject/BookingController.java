@@ -10,7 +10,7 @@ public class BookingController {
         //done ;Fækka í currentCapacity ef paymentConfirmed er true
         // done;Setja nafn og userID úr account inná passengerList
         //Button listener???
-        if (b.getPaymentConfirmed() && !trip.isFullyBooked() && !trip.isCanceledTrip()) {
+        if (b.getPaymentConfirmed() && !trip.getIsFullyBooked() && !trip.isCanceledTrip()) {
             int t = b.getNmbRes();
             trip.setCapacity(trip.getCapacity() - t);
             account.setCart(b.getTripUnit());
@@ -25,8 +25,8 @@ public class BookingController {
         //done;Tekur nöfnin sem sett voru á passengerList út
         //done;Tekur út af cart
         //Button listener??
-        int t = b.getNmbRes() * (-1);
-        trip.setCapacity(trip.getCapacity() + t);
+        int t = b.getNmbRes();
+        trip.setCapacity(trip.getCapacity() - t);
         account.getCart().remove(b);
         DB.addPassengers(b).remove(b.getAccountUnit());
     }

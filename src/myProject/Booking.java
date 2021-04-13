@@ -37,7 +37,7 @@ public class Booking {
 
     public void setNmbRes(int t) {
         //Event listener her ?
-        if (tripUnit.isFullyBooked()) {
+        if (tripUnit.getIsFullyBooked()) {
             tripUnit.setCapacity(tripUnit.getCapacity() - t);
         } else System.out.println("Sold Out");
     }

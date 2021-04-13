@@ -98,10 +98,8 @@ public class Trip {
         this.minReservations = minReservations;
     }
 
-    public boolean isFullyBooked() {
-        if (getMaxReservations() <= getCapacity()) {
-            return true;
-        } else return false;
+    public boolean getIsFullyBooked() {
+        return isFullyBooked == true;
     }
 
     public void setFullyBooked(boolean fullyBooked) {
@@ -129,7 +127,11 @@ public class Trip {
     }
 
     public void setCapacity(int capacity) {
-        this.capacity = capacity;
+        if (capacity < maxReservations) {
+            isFullyBooked = false;
+            this.capacity = capacity;
+        } else isFullyBooked = true;
+        this.capacity = 0;
     }
 
     public boolean isCanceledTrip() {
