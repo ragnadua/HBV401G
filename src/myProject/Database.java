@@ -5,24 +5,11 @@ package myProject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.text.DateFormat;
-
 public class Database {
     private ObservableList<Trip> allTrips = FXCollections.observableArrayList();
     private ObservableList<Account> allAccounts = FXCollections.observableArrayList();
     private ObservableList<Booking> allBookings = FXCollections.observableArrayList();
 
-    /*
-    public ObservableList<Account> addAccount(Account a) {
-        //Create an empty Observable list that we will fill with data
-        ObservableList<Account> accounts = FXCollections.observableArrayList();
-        //Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
-        accounts.add(a);
-        return accounts;
-    }
-    */
     public Database() {
         this.allTrips = getTrip();
         this.allAccounts = getAccount(); // Ragna þarf að hjálpa okkur
@@ -41,13 +28,42 @@ public class Database {
         this.allTrips = allTrips;
     }
 
+    public void AddAccount(Account a) {
+        allAccounts.add(a);
+    }
+
+    public ObservableList<Account> getAllAccounts() {
+        return allAccounts;
+    }
+
+    public void setAllAccounts(ObservableList<Account> allAccounts) {
+        this.allAccounts = allAccounts;
+
+    }
+
+    public ObservableList<Account> addPassengers(Booking b) {
+        ObservableList<Account> passengers = FXCollections.observableArrayList();
+        passengers.add(b.getAccountUnit());
+        return passengers;
+    }
+
+    private ObservableList<Account> getAccount() {
+        ObservableList<Account> accounts = FXCollections.observableArrayList();
+        return accounts;
+    }
+
+    private ObservableList<Booking> getBooking() {
+        ObservableList<Booking> bookings = FXCollections.observableArrayList();
+        return bookings;
+    }
+
     private ObservableList<Trip> getTrip() {
         ObservableList<Trip> trips = FXCollections.observableArrayList();
-        trips.add(new Trip("Isafjordur", "Hiking", "2021, 8, 8", "08:00"));
+        /*trips.add(new Trip("Isafjordur", "Hiking", "2021, 8, 8", "08:00"));
         trips.add(new Trip("Reykjavik", "City tour", "2021, 8, 8", "12:00"));
         trips.add(new Trip("Isafjordur", "City tour", "2021, 8, 8", "16:00"));
         trips.add(new Trip("Egilsstadir", "Sailing", "2021, 8, 82", "16:00"));
-        trips.add(new Trip("Akureyri", "Skiing", "2021, 8, 8", "08:00"));
+        trips.add(new Trip("Akureyri", "Skiing", "2021, 8, 8", "08:00"));*/
         return trips;
     }
 
@@ -65,13 +81,15 @@ public class Database {
 
     }
 
-    public void dateAndTime(String DAT) {
+    /*public void dateAndTime(String DAT) {
         String myDate = "2014/10/29 18:10:45";
         //creates a formatter that parses the date in the given format
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date time = sdf.parse(myDate);
         long timeInMillis = time.getDateAndTime();
-    }
+
+    }*/
+
 
     private ObservableList<Trip> getTime() {
         ObservableList<Trip> times = FXCollections.observableArrayList();
@@ -110,20 +128,6 @@ public class Database {
         return categories;
     }
 
-    public ObservableList<Account> addPassengers(Booking b) {
-        ObservableList<Account> passengers = FXCollections.observableArrayList();
-
-        passengers.add(b.getAccountUnit());
-        return passengers;
-    }
-
-    public ObservableList<Account> addAccount(Account a) {
-        //Create an empty Observable list that we will fill with data
-        ObservableList<Account> accounts = FXCollections.observableArrayList();
-        //Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
-        accounts.add(a);
-        return accounts;
-    }
 
     public ObservableList<PaymentInfo> getPaymentInfo(Account a) {
         ObservableList<PaymentInfo> paymentInfo = FXCollections.observableArrayList();
@@ -131,7 +135,7 @@ public class Database {
         return paymentInfo;
     }
 
-    public PaymentInfo getPaymentInfoByUserID(String ID) {
+   /* public PaymentInfo getPaymentInfoByUserID(String ID) {
         PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", "131");
         if (ID.equals(payInfo1.getUserID())) {
             return payInfo1;
@@ -147,32 +151,7 @@ public class Database {
         if (ID.equals(ID2) && password.equals(pw2))
             return account1;
         else return null;
-    }
-
-
-   /* public Trip getTripByDestination(String d) {
-        if (d == dest1.getDestination())
-            return dest1;
-        else if (d == dest2.getDestination())
-            return dest2;
-        else if (d == dest3.getDestination())
-            return dest3;
-        else if (d == dest4.getDestination())
-            return dest4;
-        else
-            System.out.println("Not avalible");
-    }
-
-    public Trip getTripByCategory(String c) {
-        if (c == cat1.getCategory())
-            return cat1;
-        else if (c == cat2.getCategory())
-            return cat2;
-        else if (c == cat3.getCategory())
-            return cat3;
-        else if (c == cat4.getCategory())
-            return cat4;
-        else
-            System.out.println("Not avalable");
     }*/
+
+
 }
