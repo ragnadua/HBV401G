@@ -99,7 +99,7 @@ public class Trip {
     }
 
     public boolean isFullyBooked() {
-        if (getMaxReservations() <= getCapacity()) {
+        if (getMaxReservations() == getCapacity()) {
             return true;
         } else return false;
     }

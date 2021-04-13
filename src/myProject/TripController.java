@@ -20,7 +20,7 @@ public class TripController {
         return trip;
     }
 
-    public Trip createTrip(String tripID, String destination, float date, float time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
+    public Trip createTrip(String tripID, String destination, String date, String time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
         trip = new Trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations, isFullyBooked, category, schedule, capacity, canceledTrip, price);
         return trip;
     }
