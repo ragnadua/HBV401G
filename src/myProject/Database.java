@@ -12,8 +12,8 @@ public class Database {
 
     public Database() {
         this.allTrips = getTrip();
-        this.allAccounts = getAccount(); // Ragna þarf að hjálpa okkur
-        this.allBookings = getBooking(); // Ragna þarf að hjálpa okkur
+        this.allAccounts = getAccount();
+        this.allBookings = getBooking();
     }
 
     public void AddTrip(Trip t) {
@@ -38,6 +38,19 @@ public class Database {
 
     public void setAllAccounts(ObservableList<Account> allAccounts) {
         this.allAccounts = allAccounts;
+
+    }
+
+    public void AddBooking(Account a) {
+        allAccounts.add(a);
+    }
+
+    public ObservableList<Booking> getAllBookings() {
+        return allBookings;
+    }
+
+    public void setAllBookings(ObservableList<Booking> allBookings) {
+        this.allBookings = allBookings;
 
     }
 
