@@ -42,11 +42,40 @@ public class SearchController {
         return returnList;
     }
 
-    // Þarf að klára
     public ObservableList<Trip> GetTripsByDate(Date date) {
         ObservableList<Trip> returnList = FXCollections.observableArrayList();
         for (Trip t : DB.getAllTrips()) {
             if (t.getDate().compareTo(date) == 0) {
+                returnList.add(t);
+            }
+        }
+        return returnList;
+    }
+
+    public ObservableList<Trip> GetTripsByDestinationAndDate(String destination, Date date) {
+        ObservableList<Trip> returnList = FXCollections.observableArrayList();
+        for (Trip t : DB.getAllTrips()) {
+            if (t.getDestination().compareTo(destination) == 0 && t.getDate().compareTo(date) == 0) {
+                returnList.add(t);
+            }
+        }
+        return returnList;
+    }
+
+    public ObservableList<Trip> GetTripsByCategoryAndDate(String category, Date date) {
+        ObservableList<Trip> returnList = FXCollections.observableArrayList();
+        for (Trip t : DB.getAllTrips()) {
+            if (t.getCategory().compareTo(category) == 0 && t.getDate().compareTo(date) == 0) {
+                returnList.add(t);
+            }
+        }
+        return returnList;
+    }
+
+    public ObservableList<Trip> GetTripsByDestinationCategoryAndDate(String destination, String category, Date date) {
+        ObservableList<Trip> returnList = FXCollections.observableArrayList();
+        for (Trip t : DB.getAllTrips()) {
+            if (t.getDestination().compareTo(destination) == 0 && t.getCategory().compareTo(category) == 0 && t.getDate().compareTo(date) == 0) {
                 returnList.add(t);
             }
         }
