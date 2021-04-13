@@ -1,6 +1,7 @@
 package myProject;
 
 import java.awt.image.BufferedImage;
+import java.util.Date;
 
 public class TripController {
     private Booking booking;
@@ -21,8 +22,8 @@ public class TripController {
     }
 
     // Geyma aðeins
-    public Trip createTrip(String tripID, String destination, String date, String time, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
-        trip = new Trip(tripID, destination, date, time, hostEmail, maxReservations, minReservations, isFullyBooked, category, schedule, capacity, canceledTrip, price);
+    public Trip createTrip(String tripID, String destination, Date date, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
+        trip = new Trip(tripID, destination, date, hostEmail, maxReservations, minReservations, isFullyBooked, category, schedule, capacity, canceledTrip, price);
         return trip;
     }
 
