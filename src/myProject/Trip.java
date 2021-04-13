@@ -1,11 +1,13 @@
 package myProject;
 
 import java.awt.image.BufferedImage;
+import java.util.Date;
 
 public class Trip {
     private String tripID;
     private String destination;
-    private String dateAndTime;
+    //private String dateAndTime;
+    private Date date;
     private String hostEmail;
     private int maxReservations = 30;
     private int minReservations = 10;
@@ -20,15 +22,16 @@ public class Trip {
         this.destination = destination;
     }
 
-    public Trip(String destination, String category, String date, String time) {
+    public Trip(String destination, String category, Date date, String time) {
         this.destination = destination;
     }
 
-// Breytum aðeins hérna
-    public Trip(String tripID, String destination, String dateAndTime, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
+    // Breytum aðeins hérna
+    public Trip(String tripID, String destination, Date date, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
         this.tripID = tripID;
         this.destination = destination;
-        this.dateAndTime = dateAndTime;
+        //this.dateAndTime = dateAndTime;
+        this.date = date;
         this.hostEmail = hostEmail;
         this.maxReservations = maxReservations;
         this.minReservations = minReservations;
@@ -56,22 +59,22 @@ public class Trip {
         this.destination = destination;
     }
 
-    public String getDateAndTime() {
+    /*public String getDateAndTime() {
         return dateAndTime;
     }
 
     public void setDateAndTime(String dateAndTime) {
         this.dateAndTime = dateAndTime;
-    }
-    /*
-    public String getDate() {
+    }*/
+
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
-
+    /*
     public String getTime() {
         return time;
     }
