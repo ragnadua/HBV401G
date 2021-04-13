@@ -3,8 +3,6 @@ package myProject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.util.ArrayList;
-
 public class SearchController {
     private Trip trip;
     private Database DB;
