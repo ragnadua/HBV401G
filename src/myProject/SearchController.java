@@ -9,6 +9,27 @@ public class SearchController {
     private Trip trip;
     private Database DB;
 
+    public ObservableList<Trip> GetTripsByDestination(String destination) {
+        ObservableList<Trip> returnList = FXCollections.observableArrayList();
+        for (Trip t : DB.getAllTrips()) {
+            if (t.getDestination().compareTo(destination) == 0) {
+                returnList.add(t);
+            }
+        }
+        return returnList;
+    }
+
+    public ObservableList<Trip> GetTripsByCategory(String category) {
+        ObservableList<Trip> returnList = FXCollections.observableArrayList();
+        for (Trip t : DB.getAllTrips()) {
+            if (t.getCategory().compareTo(category) == 0) {
+                returnList.add(t);
+            }
+        }
+        return returnList;
+    }
+
+
     public ObservableList<Trip> getDestination(String s) {
         String dest = DB.getDestination().toString();
         if (dest.contentEquals(s)) {

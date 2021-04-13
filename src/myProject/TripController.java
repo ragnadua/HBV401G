@@ -25,14 +25,14 @@ public class TripController {
         return trip;
     }
 
-    // ATHUGA
+    /* ATHUGA
     public Trip fullyBooked() {
         if (booking.getNmbRes() == trip.getMaxReservations()) {
             trip.isFullyBooked() = true;
             System.out.println("Is fully Booked");
         }
         return trip;
-    }
+    }*/
 
 }
 

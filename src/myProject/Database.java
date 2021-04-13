@@ -6,10 +6,29 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Database {
+    private ObservableList<Trip> allTrips = FXCollections.observableArrayList();
+    private ObservableList<Account> allAccounts = FXCollections.observableArrayList();
+    private ObservableList<Booking> allBookings = FXCollections.observableArrayList();
+
     public Database() {
+        this.allTrips = getTrip();
+        this.allAccounts = getAccount();
+        this.allBookings = getBooking();
     }
 
-    public ObservableList<Trip> getTrip() {
+    public void AddTrip(Trip t) {
+        allTrips.add(t);
+    }
+
+    public ObservableList<Trip> getAllTrips() {
+        return allTrips;
+    }
+
+    public void setAllTrips(ObservableList<Trip> allTrips) {
+        this.allTrips = allTrips;
+    }
+
+    private ObservableList<Trip> getTrip() {
         ObservableList<Trip> trips = FXCollections.observableArrayList();
         trips.add(new Trip("Isafjordur", "Hiking", "2021, 8, 8", "08:00"));
         trips.add(new Trip("Reykjavik", "City tour", "2021, 8, 8", "12:00"));
@@ -19,7 +38,7 @@ public class Database {
         return trips;
     }
 
-    public ObservableList<Trip> getDate() {
+    private ObservableList<Trip> getDate() {
         ObservableList<Trip> dates = FXCollections.observableArrayList();
         Trip date1 = new Trip("2021, 8, 8");
         Trip date2 = new Trip("2021, 6, 15");
@@ -33,7 +52,7 @@ public class Database {
 
     }
 
-    public ObservableList<Trip> getTime() {
+    private ObservableList<Trip> getTime() {
         ObservableList<Trip> times = FXCollections.observableArrayList();
         Trip time1 = new Trip("08:00");
         Trip time2 = new Trip("12:00");
@@ -44,7 +63,7 @@ public class Database {
         return times;
     }
 
-    public ObservableList<Trip> getDestination() {
+    private ObservableList<Trip> getDestination() {
         ObservableList<Trip> destinations = FXCollections.observableArrayList();
         Trip dest1 = new Trip("Reykjavik");
         Trip dest2 = new Trip("Akureyri");
@@ -57,7 +76,7 @@ public class Database {
         return destinations;
     }
 
-    public ObservableList<Trip> getCategory() {
+    private ObservableList<Trip> getCategory() {
         ObservableList<Trip> categories = FXCollections.observableArrayList();
         Trip cat1 = new Trip("Skiing");
         Trip cat2 = new Trip("Hiking");
