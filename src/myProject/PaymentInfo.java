@@ -5,13 +5,13 @@ public class PaymentInfo {
     private String userID;
     private String expDate;
     private String cardNumber;
-    private int ccv;
+    private String cvv;
 
-    public PaymentInfo(String userID, String expDate, String cardNumber, int ccv) {
+    public PaymentInfo(String userID, String expDate, String cardNumber, String ccv) {
         this.userID = userID;
         this.expDate = expDate;
         this.cardNumber = cardNumber;
-        this.ccv = ccv;
+        this.cvv = ccv;
     }
 
     public String getUserID() {
@@ -38,11 +38,11 @@ public class PaymentInfo {
         this.cardNumber = cardNumber;
     }
 
-    public int getCcv() {
-        return ccv;
+    public String getCvv() {
+        return cvv;
     }
 
-    public void setCcv(int ccv) {
-        this.ccv = ccv;
+    public void setCvv(String cvv) {
+        this.cvv = cvv;
     }
 }

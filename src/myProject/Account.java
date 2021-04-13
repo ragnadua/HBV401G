@@ -9,7 +9,7 @@ public class Account {
     private String password;
     private String email;
     private String phoneNumber;
-    private PaymentInfo payInfo = new PaymentInfo(); //meikar þetta sens hér?
+    private PaymentInfo payInfo;// = new PaymentInfo(); //meikar þetta sens hér?
     private ArrayList cart;
 
 
@@ -25,7 +25,7 @@ public class Account {
 
     }
 
-    public Account(String payInfo) {
+    public Account(PaymentInfo payInfo) {
         this.payInfo = payInfo;
     }
 
@@ -89,9 +89,10 @@ public class Account {
         return cart;
     }
 
-    public void setCart(ArrayList cart) {
-        this.cart = cart;
+    public void setCart(Trip t) {
+        cart.add(t);
         // gamalt: á að uppfæra cart eftir að bookingController gerir addToCart()
+        //Uppfaert sma
     }
 
 }

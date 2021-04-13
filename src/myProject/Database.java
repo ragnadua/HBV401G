@@ -5,91 +5,103 @@ package myProject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.util.ArrayList;
-
 public class Database {
     public Database() {
     }
 
-    public ArrayList<Trip> getTrip() {
-        ArrayList<Trip> trip = new ArrayList<>();
-        trip.add(new Trip("Ísafjörður", "Hiking", "2021, 8, 8", "08:00"));
-        trip.add(new Trip("Reykjavík", "City tour", "2021, 8, 8", "12:00"));
-        trip.add(new Trip("Ísafjörður", "City tour", "2021, 8, 8", "16:00"));
-        trip.add(new Trip("Eigilsstaðir", "Sailing", "2021, 8, 82", "16:00"));
-        trip.add(new Trip("Akureyri", "Skiing", "2021, 8, 8", "08:00"));
-        return trip;
+    public ObservableList<Trip> getTrip() {
+        ObservableList<Trip> trips = FXCollections.observableArrayList();
+        trips.add(new Trip("Isafjordur", "Hiking", "2021, 8, 8", "08:00"));
+        trips.add(new Trip("Reykjavik", "City tour", "2021, 8, 8", "12:00"));
+        trips.add(new Trip("Isafjordur", "City tour", "2021, 8, 8", "16:00"));
+        trips.add(new Trip("Egilsstadir", "Sailing", "2021, 8, 82", "16:00"));
+        trips.add(new Trip("Akureyri", "Skiing", "2021, 8, 8", "08:00"));
+        return trips;
     }
 
     public ObservableList<Trip> getDate() {
-        ObservableList<Trip> date = FXCollections.observableArrayList();
+        ObservableList<Trip> dates = FXCollections.observableArrayList();
         Trip date1 = new Trip("2021, 8, 8");
         Trip date2 = new Trip("2021, 6, 15");
         Trip date3 = new Trip("2021, 7, 5");
         Trip date4 = new Trip("2021, 7, 20");
-        date.add(date1);
-        date.add(date2);
-        date.add(date3);
-        date.add(date4);
-        return date;
+        dates.add(date1);
+        dates.add(date2);
+        dates.add(date3);
+        dates.add(date4);
+        return dates;
 
     }
 
     public ObservableList<Trip> getTime() {
-        ObservableList<Trip> time = FXCollections.observableArrayList();
+        ObservableList<Trip> times = FXCollections.observableArrayList();
         Trip time1 = new Trip("08:00");
         Trip time2 = new Trip("12:00");
         Trip time3 = new Trip("16:00");
-        time.add(time1);
-        time.add(time2);
-        time.add(time3);
-        return time;
+        times.add(time1);
+        times.add(time2);
+        times.add(time3);
+        return times;
     }
 
     public ObservableList<Trip> getDestination() {
-        ObservableList<Trip> destination = FXCollections.observableArrayList();
-        Trip dest1 = new Trip("Reykjavík");
+        ObservableList<Trip> destinations = FXCollections.observableArrayList();
+        Trip dest1 = new Trip("Reykjavik");
         Trip dest2 = new Trip("Akureyri");
-        Trip dest3 = new Trip("Ísafjörður");
-        Trip dest4 = new Trip("Egilsstaðir");
-        destination.add(dest1);
-        destination.add(dest2);
-        destination.add(dest3);
-        destination.add(dest4);
-        return destination;
+        Trip dest3 = new Trip("Isafjordur");
+        Trip dest4 = new Trip("Egilsstadir");
+        destinations.add(dest1);
+        destinations.add(dest2);
+        destinations.add(dest3);
+        destinations.add(dest4);
+        return destinations;
     }
 
     public ObservableList<Trip> getCategory() {
-        ObservableList<Trip> category = FXCollections.observableArrayList();
+        ObservableList<Trip> categories = FXCollections.observableArrayList();
         Trip cat1 = new Trip("Skiing");
         Trip cat2 = new Trip("Hiking");
         Trip cat3 = new Trip("City tour");
         Trip cat4 = new Trip("Sailing");
-        category.add(cat1);
-        category.add(cat2);
-        category.add(cat3);
-        category.add(cat4);
-        return category;
+        categories.add(cat1);
+        categories.add(cat2);
+        categories.add(cat3);
+        categories.add(cat4);
+        return categories;
     }
 
-    // eitthvað rugl, þarf að laga
-    public ObservableList<Account> getAccount() {
+    public ObservableList<Account> addPassengers(Booking b) {
+        ObservableList<Account> passengers = FXCollections.observableArrayList();
+
+        passengers.add(b.getAccountUnit());
+        return passengers;
+    }
+
+    public ObservableList<Account> addAccount(Account a) {
         //Create an empty Observable list that we will fill with data
-        ObservableList<Account> Account = FXCollections.observableArrayList();
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+        ObservableList<Account> accounts = FXCollections.observableArrayList();
+        //Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+        accounts.add(a);
+        return accounts;
     }
 
-    ArrayList<Booking> bookings1 = new ArrayList<>();
-
+    public ObservableList<PaymentInfo> getPaymentInfo(Account a) {
+        ObservableList<PaymentInfo> paymentInfo = FXCollections.observableArrayList();
+        paymentInfo.add(a.getPayInfo());
+        return paymentInfo;
+    }
 
     public PaymentInfo getPaymentInfoByUserID(String ID) {
         PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", "131");
-        return PaymentInfo;
+        if (ID.equals(payInfo1.getUserID())) {
+            return payInfo1;
+        } else return null;
+
     }
 
 
     public Account getAccountByIDandPassword(String ID, String password) {
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", null, null);
         String ID2 = account1.getUserID();
         String pw2 = account1.getPassword();
         if (ID.equals(ID2) && password.equals(pw2))
@@ -97,13 +109,8 @@ public class Database {
         else return null;
     }
 
-    /// Vitlaust, þarf að laga
-    public Account getPaymentInfoByUserID(String payInfo) {
-        Account payInfo1 = new Account("2107002260", "03/10", "2222 3333 4444 5555", "131");
 
-    }
-
-    public Trip getTripByDestination(String d) {
+   /* public Trip getTripByDestination(String d) {
         if (d == dest1.getDestination())
             return dest1;
         else if (d == dest2.getDestination())
@@ -127,5 +134,5 @@ public class Database {
             return cat4;
         else
             System.out.println("Not avalable");
-    }
+    }*/
 }

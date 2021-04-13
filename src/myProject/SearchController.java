@@ -16,7 +16,7 @@ public class SearchController {
         }
         return reservedBooks;
     }*/
-
+    
     // Ef svo ætti þetta ekki þá að vera svona?
     private ObservableList<Database> getTrip(Trip trip) {
         ObservableList<Trip> bookedTrip = FXCollections.observableArrayList();

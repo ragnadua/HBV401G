@@ -8,8 +8,8 @@ public class Trip {
     private String date;
     private String time;
     private String hostEmail;
-    private final int maxReservations = 30;
-    private final int minReservations = 10;
+    private int maxReservations = 30;
+    private int minReservations = 10;
     private boolean isFullyBooked;
     private String category;
     private BufferedImage schedule;
@@ -99,7 +99,9 @@ public class Trip {
     }
 
     public boolean isFullyBooked() {
-        return isFullyBooked;
+        if (getMaxReservations() <= getCapacity()) {
+            return true;
+        } else return false;
     }
 
     public void setFullyBooked(boolean fullyBooked) {
@@ -145,14 +147,6 @@ public class Trip {
     public void setPrice(int price) {
         this.price = price;
 
-    }
-
-    //Athuga
-    public void fullyBooked() {
-        if (booking.getNmbRes() == getMaxReservations()) {
-            isFullyBooked() = true;
-            System.out.println("Is fully Booked");
-        }
     }
 
 }
