@@ -7,6 +7,27 @@ import java.util.ArrayList;
 
 public class SearchController {
     private Trip trip;
+    private Database DB;
+
+    public ObservableList<Trip> getDestination(String s) {
+        String dest = DB.getDestination().toString();
+        if (dest.contentEquals(s)) {
+            return DB.getTrip();
+
+        } else return null;
+    }
+
+    public ObservableList<Trip> getCategory() {
+        //Button listener med flokkum, skila lista af ferdum sem hafa thennan flokk
+    }
+
+    public ObservableList<Trip> getTime(String s) {
+        //?Mogulega haegt ad gera thetta eins og category?
+        String time = DB.getTime().toString();
+        if (time.equals(s)) {
+            return DB.getTrip().filtered();
+        }
+    }
     // Er þetta ekki hér?
     /*private ObservableList<Book> getReservedBooks(User user){
         ObservableList<Book> reservedBooks = FXCollections.observableArrayList();
@@ -16,7 +37,7 @@ public class SearchController {
         }
         return reservedBooks;
     }*/
-    
+
     // Ef svo ætti þetta ekki þá að vera svona?
     private ObservableList<Database> getTrip(Trip trip) {
         ObservableList<Trip> bookedTrip = FXCollections.observableArrayList();

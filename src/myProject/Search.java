@@ -5,10 +5,11 @@ public class Search {
 
     public String searchDestination(String dest) {
         // Veit ekki alveg hvernig á að framkvæma þetta
-        if (dest == DB.getDestination()) {
+        /*if (dest == DB.getDestination()) {
             return dest;
         }
-        return dest;
+        return dest;*/
+
     }
 
     public String searchCategory(String category) {

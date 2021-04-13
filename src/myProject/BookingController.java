@@ -1,9 +1,9 @@
 package myProject;
 
 public class BookingController {
-    Trip trip;
-    Account account;
-    Database DB;
+    private Trip trip;
+    private Account account;
+    private Database DB;
 
     public void addToCart(Booking b) {
         // done; bæta TripID, destination,Date og time inn í Cart
