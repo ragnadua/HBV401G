@@ -5,15 +5,28 @@ package myProject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.DateFormat;
+
 public class Database {
     private ObservableList<Trip> allTrips = FXCollections.observableArrayList();
     private ObservableList<Account> allAccounts = FXCollections.observableArrayList();
     private ObservableList<Booking> allBookings = FXCollections.observableArrayList();
 
+    /*
+    public ObservableList<Account> addAccount(Account a) {
+        //Create an empty Observable list that we will fill with data
+        ObservableList<Account> accounts = FXCollections.observableArrayList();
+        //Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", payInfo1, cart1);
+        accounts.add(a);
+        return accounts;
+    }
+    */
     public Database() {
         this.allTrips = getTrip();
-        this.allAccounts = getAccount();
-        this.allBookings = getBooking();
+        this.allAccounts = getAccount(); // Ragna þarf að hjálpa okkur
+        this.allBookings = getBooking(); // Ragna þarf að hjálpa okkur
     }
 
     public void AddTrip(Trip t) {
@@ -50,6 +63,14 @@ public class Database {
         dates.add(date4);
         return dates;
 
+    }
+
+    public void dateAndTime(String DAT) {
+        String myDate = "2014/10/29 18:10:45";
+        //creates a formatter that parses the date in the given format
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date time = sdf.parse(myDate);
+        long timeInMillis = time.getDateAndTime();
     }
 
     private ObservableList<Trip> getTime() {

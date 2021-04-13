@@ -29,43 +29,24 @@ public class SearchController {
         return returnList;
     }
 
-
-    public ObservableList<Trip> getDestination(String s) {
-        String dest = DB.getDestination().toString();
-        if (dest.contentEquals(s)) {
-            return DB.getTrip();
-
-        } else return null;
+    public ObservableList<Trip> GetTripsByCategoryAndDestination(String category, String destination) {
+        ObservableList<Trip> returnList = FXCollections.observableArrayList();
+        for (Trip t : DB.getAllTrips()) {
+            if (t.getCategory().compareTo(category) == 0 && t.getDestination().compareTo(destination) == 0) {
+                returnList.add(t);
+            }
+        }
+        return returnList;
     }
 
-    public ObservableList<Trip> getCategory() {
-        //Button listener med flokkum, skila lista af ferdum sem hafa thennan flokk
-    }
-
-    public ObservableList<Trip> getTime(String s) {
-        //?Mogulega haegt ad gera thetta eins og category?
-        String time = DB.getTime().toString();
-        if (time.equals(s)) {
-            return DB.getTrip().filtered();
+    // Þarf að klára
+    public ObservableList<Trip> GetTripsByTimeAndDate(String category) {
+        ObservableList<Trip> returnList = FXCollections.observableArrayList();
+        for (Trip t : DB.getAllTrips()) {
+            if (t.getCategory().compareTo(category) == 0) {
+                returnList.add(t);
+            }
         }
-    }
-    // Er þetta ekki hér?
-    /*private ObservableList<Book> getReservedBooks(User user){
-        ObservableList<Book> reservedBooks = FXCollections.observableArrayList();
-        ArrayList<Reservation> reservations = user.getReservations();
-        for(Reservation reservation: reservations){
-            reservedBooks.add(reservation.getBook());
-        }
-        return reservedBooks;
-    }*/
-
-    // Ef svo ætti þetta ekki þá að vera svona?
-    private ObservableList<Database> getTrip(Trip trip) {
-        ObservableList<Trip> bookedTrip = FXCollections.observableArrayList();
-        ArrayList<Database> trips = user.getTrip();
-        for (Trip t : trips) {
-            bookedTrip.add(Trip.getTrip());
-        }
-        return bookedTrip;
+        return returnList;
     }
 }
