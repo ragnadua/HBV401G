@@ -13,7 +13,9 @@ public class Account {
     private ArrayList cart;
 
 
-    public Account(String userID, String firstName, String lastName, String password, String email, String phoneNumber, PaymentInfo payInfo, ArrayList cart) {
+    public Account(String userID, String firstName, String lastName,
+                   String password, String email, String phoneNumber,
+                   PaymentInfo payInfo, ArrayList cart) {
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;

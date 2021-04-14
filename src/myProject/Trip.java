@@ -9,8 +9,8 @@ public class Trip {
     //private String dateAndTime;
     private Date date;
     private String hostEmail;
-    private int maxReservations = 30;
-    private int minReservations = 10;
+    private int maxReservations;
+    private int minReservations;
     private boolean isFullyBooked;
     private String category;
     private BufferedImage schedule;
@@ -18,19 +18,13 @@ public class Trip {
     private boolean canceledTrip;
     private int price;
 
-    public Trip(String destination) {
-        this.destination = destination;
-    }
 
-    public Trip(String destination, String category, Date date, String time) {
-        this.destination = destination;
-    }
-
-    // Breytum aðeins hérna
-    public Trip(String tripID, String destination, Date date, String hostEmail, int maxReservations, int minReservations, boolean isFullyBooked, String category, BufferedImage schedule, int capacity, boolean canceledTrip, int price) {
+    public Trip(String tripID, String destination, Date date, String hostEmail,
+                int maxReservations, int minReservations, boolean isFullyBooked,
+                String category, BufferedImage schedule, int capacity,
+                boolean canceledTrip, int price) {
         this.tripID = tripID;
         this.destination = destination;
-        //this.dateAndTime = dateAndTime;
         this.date = date;
         this.hostEmail = hostEmail;
         this.maxReservations = maxReservations;
@@ -59,14 +53,6 @@ public class Trip {
         this.destination = destination;
     }
 
-    /*public String getDateAndTime() {
-        return dateAndTime;
-    }
-
-    public void setDateAndTime(String dateAndTime) {
-        this.dateAndTime = dateAndTime;
-    }*/
-
     public Date getDate() {
         return date;
     }
@@ -74,14 +60,6 @@ public class Trip {
     public void setDate(Date date) {
         this.date = date;
     }
-    /*
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }*/
 
     public String getHostEmail() {
         return hostEmail;

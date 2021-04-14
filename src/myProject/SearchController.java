@@ -9,7 +9,7 @@ import java.util.Date;
 
 public class SearchController {
     private Trip trip;
-    private Database DB;
+    private Database DB = Database.getInstance();
     private SimpleDateFormat sdf;
 
     public ObservableList<Trip> GetTripsByDestination(String destination) {
@@ -80,5 +80,22 @@ public class SearchController {
             }
         }
         return returnList;
+    }
+
+    public PaymentInfo getPaymentInfoByUserID(String ID) {
+        PaymentInfo payInfo1 = new PaymentInfo("2107002260", "03/10", "2222 3333 4444 5555", "131");
+        if (ID.equals(payInfo1.getUserID())) {
+            return payInfo1;
+        } else return null;
+
+    }
+
+    public Account getAccountByIDandPassword(String ID, String password) {
+        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", null, null);
+        String ID2 = account1.getUserID();
+        String pw2 = account1.getPassword();
+        if (ID.equals(ID2) && password.equals(pw2))
+            return account1;
+        else return null;
     }
 }

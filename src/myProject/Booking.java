@@ -1,21 +1,27 @@
 package myProject;
 
-import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Booking {
     private Trip tripUnit;
     private Account accountUnit;
-    private Boolean pickUp;
-    //private float price;
+    private boolean pickUp;
     private float discount;
-    private Boolean paymentConfirmed;
+    private boolean paymentConfirmed;
     private int nmbRes;
-    private ArrayList passList;
-    private Database DB;
+
     private PaymentInfo paymentInfo;
 
+    public Booking(Trip tripUnit, Account accountUnit, boolean pickUp,
+                   float discount, boolean paymentConfirmed, int nmbRes) {
+        this.tripUnit = tripUnit;
+        this.accountUnit = accountUnit;
+        this.pickUp = pickUp;
+        this.discount = discount;
+        this.paymentConfirmed = paymentConfirmed;
+        this.nmbRes = nmbRes;
+    }
 
     public Trip getTripUnit() {
         return this.tripUnit;
@@ -53,7 +59,7 @@ public class Booking {
 
     }*/
 
-    public Boolean setPaymentConfirmed() {
+    public boolean setPaymentConfirmed() {
         String regex = "^[0-9]{3}$";
         Pattern p = Pattern.compile(regex);
         String str = paymentInfo.getCvv();
@@ -64,11 +70,11 @@ public class Booking {
         return m.matches();
     }
 
-    public Boolean getPaymentConfirmed() {
+    public boolean getPaymentConfirmed() {
         return this.paymentConfirmed;
     }
 
-    public Boolean setPickUp() {
+    public boolean setPickUp() {
         //Button listener sem returns true ef hakad i else false.
         return false;
     }
