@@ -1,13 +1,13 @@
 package myProject;
 
-public class PaymentInfo {
+public class paymentInfo {
 
     private String userID;
     private String expDate;
     private String cardNumber;
     private String cvv;
 
-    public PaymentInfo(String userID, String expDate, String cardNumber, String ccv) {
+    public paymentInfo(String userID, String expDate, String cardNumber, String ccv) {
         this.userID = userID;
         this.expDate = expDate;
         this.cardNumber = cardNumber;
