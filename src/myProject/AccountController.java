@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class AccountController {
     private Account accountUser;
+    private SearchController SC;
 
     public AccountController(Account account) {
         this.accountUser = account;
@@ -16,8 +17,7 @@ public class AccountController {
     }
 
     public Account logIn(String userID, String password) {
-        Database db = new Database();
-        return db.getAccountByIDandPassword(userID, password);
+        return SC.getAccountByIDandPassword(userID, password);
     }
 
 

@@ -2,6 +2,7 @@ package myProject;
 
 import java.awt.image.BufferedImage;
 import java.util.Date;
+import java.util.Objects;
 
 public class Trip {
     private String tripID;
@@ -136,6 +137,25 @@ public class Trip {
     public void setPrice(int price) {
         this.price = price;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Trip)) return false;
+        Trip trip = (Trip) o;
+        return getMaxReservations() == trip.getMaxReservations() &&
+                getMinReservations() == trip.getMinReservations() &&
+                isFullyBooked == trip.isFullyBooked &&
+                getCapacity() == trip.getCapacity() &&
+                isCanceledTrip() == trip.isCanceledTrip() &&
+                getPrice() == trip.getPrice() &&
+                Objects.equals(getTripID(), trip.getTripID()) &&
+                Objects.equals(getDestination(), trip.getDestination()) &&
+                Objects.equals(getDate(), trip.getDate()) &&
+                Objects.equals(getHostEmail(), trip.getHostEmail()) &&
+                Objects.equals(getCategory(), trip.getCategory()) &&
+                Objects.equals(getSchedule(), trip.getSchedule());
     }
 
 }
