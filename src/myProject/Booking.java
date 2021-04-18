@@ -31,11 +31,6 @@ public class Booking {
         return this.accountUnit;
     }
 
-    /*public float setPrice(float f) {
-        f = price;
-        return f;
-    }*/
-
     public float setDiscount(float f) {
         float price = tripUnit.getPrice();
         return (f / 100) * price;

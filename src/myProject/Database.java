@@ -5,9 +5,15 @@ package myProject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
+
+//import javafx.collections.ObservableList;
+
+//import javafx.collections.ObservableList;
 
 public class Database {
     private ObservableList<Trip> allTrips;
@@ -16,6 +22,8 @@ public class Database {
     //private ObservableList<PaymentInfo> allPaymentInfo;
 
     private static Database DBSingleton = null;
+    private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    private static final Date invalidDate = new Date(0);
 
     private Database() {
         this.allTrips = getTrip();
@@ -45,8 +53,10 @@ public class Database {
         String[] stadsetning = {"Reykjavik", "Akureyri", "Egilsstadir", "Isafjordur"};
         String[] host = {"abc@abc.com", "ballibumba@bumbuferdir.is", "visiticeland@icelandtrips.is",
                 "niceland@niceland.is", "mosi@mositrips.is"};
-        //ATH????
-        Date[] dags = {new Date(System.currentTimeMillis())};
+        Date[] dags = {fromStringToDate("10/05/2021"), fromStringToDate("01/05/2021"), fromStringToDate("05/05/2021"),
+                fromStringToDate("15/05/2021"), fromStringToDate("17/05/2021"), fromStringToDate("11/05/2021"),
+                fromStringToDate("20/05/2021"), fromStringToDate("23/05/2021"), fromStringToDate("27/05/2021"),
+                fromStringToDate("30/05/2021")};
         String[] flokkur = {"Hiking", "Sailing", "Skiing", "Biking", "City Tour"};
         int max = 40;
         int min = 10;
@@ -54,7 +64,7 @@ public class Database {
 
         // For lykkja sem byr til 30 random Trip hluti
         for (int i = 0; i < 30; i++) {
-            AddTrip(new Trip(String.valueOf(i), stadsetning[i % 4], dags[i % 6],
+            AddTrip(new Trip(String.valueOf(i), stadsetning[i % 4], dags[i % 10],
                     host[i % 5], max, min, false, flokkur[i % 5], null, max, false, verd[i % 6]));
         }
 
@@ -92,6 +102,14 @@ public class Database {
                     afslattur[i % 3], rn.nextBoolean(), saeti[i % 4]));
         }
 
+    }
+
+    private Date fromStringToDate(String s) {
+        try {
+            return sdf.parse(s);
+        } catch (ParseException e) {
+            return invalidDate;
+        }
     }
 
     public void AddTrip(Trip t) {
