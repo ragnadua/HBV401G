@@ -158,4 +158,21 @@ public class Trip {
                 Objects.equals(getSchedule(), trip.getSchedule());
     }
 
+    @Override
+    public String toString() {
+        return "Trip{" +
+                "tripID='" + tripID + '\'' +
+                ", destination='" + destination + '\'' +
+                ", date=" + date +
+                ", hostEmail='" + hostEmail + '\'' +
+                ", maxReservations=" + maxReservations +
+                ", minReservations=" + minReservations +
+                ", isFullyBooked=" + isFullyBooked +
+                ", category='" + category + '\'' +
+                ", schedule=" + schedule +
+                ", capacity=" + capacity +
+                ", canceledTrip=" + canceledTrip +
+                ", price=" + price +
+                '}';
+    }
 }

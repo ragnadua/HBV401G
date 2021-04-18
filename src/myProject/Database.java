@@ -53,20 +53,30 @@ public class Database {
         String[] stadsetning = {"Reykjavik", "Akureyri", "Egilsstadir", "Isafjordur"};
         String[] host = {"abc@abc.com", "ballibumba@bumbuferdir.is", "visiticeland@icelandtrips.is",
                 "niceland@niceland.is", "mosi@mositrips.is"};
-        Date[] dags = {fromStringToDate("10/05/2021"), fromStringToDate("01/05/2021"), fromStringToDate("05/05/2021"),
-                fromStringToDate("15/05/2021"), fromStringToDate("17/05/2021"), fromStringToDate("11/05/2021"),
-                fromStringToDate("20/05/2021"), fromStringToDate("23/05/2021"), fromStringToDate("27/05/2021"),
-                fromStringToDate("30/05/2021")};
+        Date[] dags = new Date[31];
+        for (int i = 0; i < 31; i++) {
+            dags[i] = fromStringToDate(i + 1 + "/05/2021");
+        }
         String[] flokkur = {"Hiking", "Sailing", "Skiing", "Biking", "City Tour"};
         int max = 40;
         int min = 10;
         int[] verd = {50, 100, 150, 200, 250, 300};
 
         // For lykkja sem byr til 30 random Trip hluti
-        for (int i = 0; i < 30; i++) {
-            AddTrip(new Trip(String.valueOf(i), stadsetning[i % 4], dags[i % 10],
-                    host[i % 5], max, min, false, flokkur[i % 5], null, max, false, verd[i % 6]));
+        int cnt = 0;
+        for (Date d : dags) {
+            for (String stadur : stadsetning) {
+                for (String ferd : flokkur) {
+                    if (Math.random() < 0.6) {
+                        AddTrip(new Trip(String.valueOf(cnt), stadur, d, host[cnt % 5], max, min, false, flokkur[cnt % 5], null, max, false, verd[cnt % 6]));
+                        cnt++;
+                    }
+                }
+            }
         }
+
+        //AddTrip(new Trip(String.valueOf(i), stadsetning[i % 4], dags[i % 10],
+        //                    host[i % 5], max, min, false, flokkur[i % 5], null, max, false, verd[i % 6]));
 
 
         //Buum til AccountData:
@@ -87,7 +97,7 @@ public class Database {
         //For-lykkja sem byr til 5 Account hluti:
         for (int i = 0; i < 5; i++) {
             AddAccount(new Account(kennitala[i], fornafn[i], eftirnafn[i], lykilord[i], netfang[i],
-                    simi[i], kortaupp[i], kerra[i]));
+                    simi[i], kortaupp[i], null));
         }
 
 
@@ -97,10 +107,10 @@ public class Database {
         Random rn = new Random();
 
         //For-lykkja sem byr til 30 random bokanir:
-        for (int i = 0; i < 30; i++) {
+       /* for (int i = 0; i < 30; i++) {
             AddBooking(new Booking(allTrips.get(i), allAccounts.get(i), rn.nextBoolean(),
                     afslattur[i % 3], rn.nextBoolean(), saeti[i % 4]));
-        }
+        }*/
 
     }
 
@@ -196,5 +206,13 @@ public class Database {
         return trips;
     }
 
+    public static void main(String[] args) {
+        Database data = Database.getInstance();
+        data.GenerateData();
+        for (Trip t : data.getAllTrips()) {
+            System.out.println(t.toString());
+        }
+
+    }
 
 }
