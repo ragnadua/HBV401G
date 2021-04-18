@@ -47,7 +47,7 @@ public class Database {
     //Notkun GenerateData();
     //Fyrir: Ekkert
     //Eftir: Gögn verda til i Database klasanum
-    public void GenerateData() {
+    public void generateData() {
 
         //Buum til TripData
         String[] stadsetning = {"Reykjavik", "Akureyri", "Egilsstadir", "Isafjordur"};
@@ -208,7 +208,7 @@ public class Database {
 
     public static void main(String[] args) {
         Database data = Database.getInstance();
-        data.GenerateData();
+        data.generateData();
         for (Trip t : data.getAllTrips()) {
             System.out.println(t.toString());
         }

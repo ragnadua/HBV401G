@@ -12,7 +12,7 @@ public class SearchController {
     private Database DB = Database.getInstance();
     private SimpleDateFormat sdf;
 
-    public ObservableList<Trip> GetTripsByDestination(String destination) {
+    public ObservableList<Trip> getTripsByDestination(String destination) {
         ObservableList<Trip> returnList = FXCollections.observableArrayList();
         for (Trip t : DB.getAllTrips()) {
             if (t.getDestination().compareTo(destination) == 0) {
@@ -22,7 +22,7 @@ public class SearchController {
         return returnList;
     }
 
-    public ObservableList<Trip> GetTripsByCategory(String category) {
+    public ObservableList<Trip> getTripsByCategory(String category) {
         ObservableList<Trip> returnList = FXCollections.observableArrayList();
         for (Trip t : DB.getAllTrips()) {
             if (t.getCategory().compareTo(category) == 0) {
@@ -32,7 +32,7 @@ public class SearchController {
         return returnList;
     }
 
-    public ObservableList<Trip> GetTripsByCategoryAndDestination(String category, String destination) {
+    public ObservableList<Trip> getTripsByCategoryAndDestination(String category, String destination) {
         ObservableList<Trip> returnList = FXCollections.observableArrayList();
         for (Trip t : DB.getAllTrips()) {
             if (t.getCategory().compareTo(category) == 0 && t.getDestination().compareTo(destination) == 0) {
@@ -42,7 +42,7 @@ public class SearchController {
         return returnList;
     }
 
-    public ObservableList<Trip> GetTripsByDate(Date date) {
+    public ObservableList<Trip> getTripsByDate(Date date) {
         ObservableList<Trip> returnList = FXCollections.observableArrayList();
         for (Trip t : DB.getAllTrips()) {
             if (t.getDate().compareTo(date) == 0) {
@@ -52,7 +52,7 @@ public class SearchController {
         return returnList;
     }
 
-    public ObservableList<Trip> GetTripsByDestinationAndDate(String destination, Date date) {
+    public ObservableList<Trip> getTripsByDestinationAndDate(String destination, Date date) {
         ObservableList<Trip> returnList = FXCollections.observableArrayList();
         for (Trip t : DB.getAllTrips()) {
             if (t.getDestination().compareTo(destination) == 0 && t.getDate().compareTo(date) == 0) {
@@ -62,7 +62,7 @@ public class SearchController {
         return returnList;
     }
 
-    public ObservableList<Trip> GetTripsByCategoryAndDate(String category, Date date) {
+    public ObservableList<Trip> getTripsByCategoryAndDate(String category, Date date) {
         ObservableList<Trip> returnList = FXCollections.observableArrayList();
         for (Trip t : DB.getAllTrips()) {
             if (t.getCategory().compareTo(category) == 0 && t.getDate().compareTo(date) == 0) {
@@ -72,7 +72,7 @@ public class SearchController {
         return returnList;
     }
 
-    public ObservableList<Trip> GetTripsByDestinationCategoryAndDate(String destination, String category, Date date) {
+    public ObservableList<Trip> getTripsByDestinationCategoryAndDate(String destination, String category, Date date) {
         ObservableList<Trip> returnList = FXCollections.observableArrayList();
         for (Trip t : DB.getAllTrips()) {
             if (t.getDestination().compareTo(destination) == 0 && t.getCategory().compareTo(category) == 0 && t.getDate().compareTo(date) == 0) {
