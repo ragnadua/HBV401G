@@ -58,8 +58,8 @@ public class Database {
             dags[i] = fromStringToDate(i + 1 + "/05/2021");
         }
         String[] flokkur = {"Hiking", "Sailing", "Skiing", "Biking", "City Tour"};
-        int max = 40;
-        int min = 10;
+        int max = 10;
+        int min = 3;
         int[] verd = {50, 100, 150, 200, 250, 300};
 
         // For lykkja sem byr til 30 random Trip hluti
@@ -68,7 +68,7 @@ public class Database {
             for (String stadur : stadsetning) {
                 for (String ferd : flokkur) {
                     if (Math.random() < 0.6) {
-                        AddTrip(new Trip(String.valueOf(cnt), stadur, d, host[cnt % 5], max, min, false, flokkur[cnt % 5], null, max, false, verd[cnt % 6]));
+                        AddTrip(new Trip(String.valueOf(cnt), stadur, d, host[cnt % 5], max, min, false, flokkur[cnt % 5], null, false, verd[cnt % 6]));
                         cnt++;
                     }
                 }
@@ -212,7 +212,20 @@ public class Database {
         for (Trip t : data.getAllTrips()) {
             System.out.println(t.toString());
         }
+        Account adgangur = data.getAllAccounts().get(0);
+        adgangur.setPayInfo(new PaymentInfo(adgangur.getUserID(), "08/22", "1111222255556666", "808"));
+        Trip triptobook = data.getAllTrips().get(0);
+        Booking bokun = new Booking(triptobook, adgangur, true, 10, true, 10);
+        if (bokun.book()) {
+            System.out.println("Booking confirmed");
+        } else
+            System.out.println("Booking failed");
 
+
+        Booking bokun2 = new Booking(triptobook, adgangur, true, 10, true, 50);
+        if (bokun2.book()) {
+            System.out.println("Booking confirmed");
+        } else
+            System.out.println("Booking failed");
     }
-
 }
