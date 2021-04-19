@@ -29,7 +29,7 @@ public class SampleController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        accounts = database.getaccounts();
+        accounts = database.getAllAccounts();
         usersListView.setItems(accounts);
     }
 }

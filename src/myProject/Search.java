@@ -1,16 +1,11 @@
 package myProject;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
-import java.util.ArrayList;
-
 public class Search {
     public Search() {
 
     }
 
-    public ObservableList<Account> getAccount() {
+    /*public ObservableList<Account> getAccount() {
         //create an empty Observiable list that we will fill with data
         ObservableList<Account> accounts = FXCollections.observableArrayList();
         // Account account1 = new Account()
@@ -23,5 +18,5 @@ public class Search {
         trips.add(new Trip("004", "Akureyri", date1, "abc@abc.com", 30, 10, false, "Cycling", null, 30, false, 100));
         trips.add(new Trip("005", "Reykjavik", date1, "abc@abc.com", 30, 10, false, "Hiking", null, 30, false, 50));
         return trips;
-    }
+    }*/
 }
