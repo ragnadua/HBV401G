@@ -1,7 +1,5 @@
 package myProject;
 
-//import com.sun.org.apache.xpath.internal.operations.String;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -11,9 +9,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 
-//import javafx.collections.ObservableList;
-
-//import javafx.collections.ObservableList;
 
 public class Database {
     private ObservableList<Trip> allTrips;
