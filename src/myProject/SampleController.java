@@ -23,6 +23,7 @@ public class SampleController implements Initializable {
     @FXML
     private TextField emailTextField;
 
+
     Database database = Database.getInstance();
 
     private ObservableList<Account> accounts = FXCollections.observableArrayList();
