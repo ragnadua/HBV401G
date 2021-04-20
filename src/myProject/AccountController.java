@@ -6,9 +6,9 @@ public class AccountController {
     private Account accountUser;
     private SearchController SC;
 
-    public AccountController(Account account) {
+    /*public AccountController(Account account) {
         this.accountUser = account;
-    }
+    }*/
 
     public Account newAccount(String userID, String firstName, String lastName, String password, String email,
                               String phoneNumber, PaymentInfo payInfo, ArrayList cart) {

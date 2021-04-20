@@ -38,7 +38,7 @@ public class Booking {
     }
 
     //tekur frá pláss í ferðinni, minnkar capacity
-    //skilar true ef það tóks, false ef það voru ekki nægilega mörg laus pláss
+    //skilar true ef það tókst, false ef það voru ekki nægilega mörg laus pláss
     public boolean reserveSpot() {
         if (nmbRes > tripUnit.getCapacity()) {
             return false;

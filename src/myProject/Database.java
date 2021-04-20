@@ -39,7 +39,7 @@ public class Database {
     Trip trip1 = new Trip("001", "Isafjordur", date1, "abc@abc.com", 30, 10, false, "Skiing", null, 30, false, 200);
     Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", null, null);*/
 
-    //Notkun GenerateData();
+    //Notkun generateData();
     //Fyrir: Ekkert
     //Eftir: Gögn verda til i Database klasanum
     public void generateData() {
