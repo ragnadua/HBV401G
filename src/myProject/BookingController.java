@@ -21,7 +21,7 @@ public class BookingController {
     //       cart and capacity restored according to how many seats the person who cancelled reserved
     public void cancelBooking(Booking b) {
         int t = b.getNmbRes();
-        trip.setCapacity(trip.getCapacity() + t);
-        account.getCart().remove(b);
+        b.getTripUnit().setCapacity(b.getTripUnit().getCapacity() + t);
+        b.getAccountUnit().getCart().remove(b);
     }
 }

@@ -20,7 +20,9 @@ public class AccountController {
     //Before: Nothing.
     //After: Returns True if the right userID and password were put in, else returns false.
     public boolean logIn(String userID, String password) {
-        return !SC.getAccountByIDandPassword(userID, password).isEmpty();
+        if (SC.getAccountByIDandPassword(userID, password).isEmpty() == false) {
+            return true;
+        } else return false;
 
     }
 

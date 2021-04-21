@@ -7,6 +7,7 @@ public class PaymentInfo {
     private String cardNumber;
     private String cvv;
 
+    //Constructor
     public PaymentInfo(String userID, String expDate, String cardNumber, String ccv) {
         this.userID = userID;
         this.expDate = expDate;

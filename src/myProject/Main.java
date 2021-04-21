@@ -1,18 +1,26 @@
 package myProject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class Main {
 
     private SearchController sc = new SearchController();
     private AccountController ac = new AccountController();
+    private TripController tc = new TripController();
     private Database db = Database.getInstance();
 
-
-    public void run(String[] args) {
+    //Usage: run(String[] args);
+    //Before: Nothing
+    //After: Takes in arguments and based on the input it executes
+    //       different lines and prints out lines when called.
+    public void run(String[] args) throws ParseException {
 
         db.generateData();
         ArrayList<Trip> listi1 = new ArrayList<Trip>();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        ArrayList<Booking> listi2 = new ArrayList<Booking>();
 
         // Searching for a day trip based on either destination or a category
         if (args.length == 1) {
@@ -43,7 +51,6 @@ public class Main {
         // Booking a trip with a destination, category and number of "seats" as the input
         if (args.length == 3) {
             Account adgangur = db.getAllAccounts().get(0);
-            adgangur.setPayInfo(new PaymentInfo(adgangur.getUserID(), "08/22", "1111222255556666", "808"));
 
             for (Trip b : db.getAllTrips()) {
                 if (args[0].compareTo(b.getDestination()) == 0 && args[1].compareTo(b.getCategory()) == 0) {
@@ -58,11 +65,23 @@ public class Main {
                 System.out.println("Booking failed");
             db.AddBooking(bokun);
         }
+
+        //Creating a new Trip
+        if (args.length == 12) {
+            tc.createTrip(args[0], args[1], sdf.parse(args[2]), args[3], Integer.parseInt(args[4]),
+                    Integer.parseInt(args[5]), Boolean.parseBoolean(args[6]),
+                    args[7], null, Integer.parseInt(args[9]), Boolean.parseBoolean(args[10]), Integer.parseInt(args[11]));
+            System.out.println(db.getAllTrips());
+        }
+        
+
     }
 
-    public static void main(String[] args) {
+    //Usage: main(String[] args)
+    //Before: Nothing
+    //After: Runs the run(String[]args) function with the input arguments.
+    public static void main(String[] args) throws ParseException {
         Main mini = new Main();
-        //String name = System.console().readLine();
         mini.run(args);
     }
 

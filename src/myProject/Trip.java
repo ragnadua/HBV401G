@@ -7,7 +7,6 @@ import java.util.Objects;
 public class Trip {
     private String tripID;
     private String destination;
-    //private String dateAndTime;
     private Date date;
     private String hostEmail;
     private int maxReservations;
@@ -19,7 +18,7 @@ public class Trip {
     private boolean canceledTrip;
     private int price;
 
-
+    //Constructor
     public Trip(String tripID, String destination, Date date, String hostEmail,
                 int maxReservations, int minReservations, boolean isFullyBooked,
                 String category, BufferedImage schedule,
@@ -138,6 +137,7 @@ public class Trip {
 
     }
 
+    //Override methods required for the T-team.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

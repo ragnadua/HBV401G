@@ -15,17 +15,21 @@ public class Database {
     private ObservableList<Account> allAccounts;
     private ObservableList<Booking> allBookings;
 
+
     private static Database DBSingleton = null;
     private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     private static final Date invalidDate = new Date(0);
 
+    //Private constructor
     private Database() {
         this.allTrips = getTrip();
         this.allAccounts = getAccount();
         this.allBookings = getBooking();
 
+
     }
 
+    //Public constructor
     public static Database getInstance() {
         if (DBSingleton == null) {
             DBSingleton = new Database();
@@ -33,12 +37,12 @@ public class Database {
         return DBSingleton;
     }
 
-    //Notkun generateData();
-    //Fyrir: Ekkert
-    //Eftir: Gögn verda til i Database klasanum
+    //Usage: generateData();
+    //Before: Nothing
+    //After: Data is generated for the Database class
     public void generateData() {
 
-        //Buum til TripData
+        //Create Trip data
         String[] stadsetning = {"Reykjavik", "Akureyri", "Egilsstadir", "Isafjordur"};
         String[] host = {"abc@abc.com", "ballibumba@bumbuferdir.is", "visiticeland@icelandtrips.is",
                 "niceland@niceland.is", "mosi@mositrips.is"};
@@ -51,7 +55,7 @@ public class Database {
         int min = 3;
         int[] verd = {50, 100, 150, 200, 250, 300};
 
-        // For lykkja sem byr til 30 random Trip hluti
+        // For- loop that generates random Trips
         int cnt = 0;
         for (Date d : dags) {
             for (String stadur : stadsetning) {
@@ -63,7 +67,7 @@ public class Database {
                 }
             }
         }
-        //Buum til AccountData:
+        //Create Account data:
         String[] kennitala = {"2107002260", "0311002590", "0101012250", "1010702669", "1001002000"};
         String[] fornafn = {"Ragna", "Inga", "Erna", "Emilía", "Ragnar"};
         String[] eftirnafn = {"Thorsdottir", "Asgeirsdottir", "Gunnarsdottir", "Rafnsdottir", "Bender"};
@@ -75,17 +79,18 @@ public class Database {
                 new PaymentInfo(kennitala[2], "01/25", "3113444472278998", "420"),
                 new PaymentInfo(kennitala[3], "10/30", "4030403040304030", "666"),
                 new PaymentInfo(kennitala[4], "11/09", "6666000066660000", "101")};
-        // Non-functional cart item 
+        // Non-functional cart item
         ArrayList[] kerra = {null};
 
 
-        //For-lykkja sem byr til 5 Account hluti:
+        //For-loop that generates 5 corresponding Account objects
         for (int i = 0; i < 5; i++) {
             AddAccount(new Account(kennitala[i], fornafn[i], eftirnafn[i], lykilord[i], netfang[i],
                     simi[i], kortaupp[i], null));
         }
 
-        //Buum til BookingData:
+
+        //Create BookingData:
         float[] afslattur = {100, 10, 20};
         int[] saeti = {1, 2, 3, 4};
         Random rn = new Random();
@@ -167,6 +172,13 @@ public class Database {
         return trips;
     }
 
+    //Usage: main(String[] args);
+    //Before: Nothing
+    //After: Data is generated
+    //       A list of Trips is generated and printed out
+    //       An account is picked from the list of all accounts and
+    //          two mock bookings are made to see if they are possible to be made,
+    //          the success printed out.
     public static void main(String[] args) {
         Database data = Database.getInstance();
         data.generateData();
