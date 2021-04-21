@@ -3,7 +3,6 @@ package myProject;
 import java.util.ArrayList;
 
 public class AccountController {
-    private Account accountUser;
     private SearchController SC;
 
     /*public AccountController(Account account) {
@@ -12,7 +11,7 @@ public class AccountController {
 
     public Account newAccount(String userID, String firstName, String lastName, String password, String email,
                               String phoneNumber, PaymentInfo payInfo, ArrayList cart) {
-        accountUser = new Account(userID, firstName, lastName, password, email, phoneNumber, payInfo, cart);
+        Account accountUser = new Account(userID, firstName, lastName, password, email, phoneNumber, payInfo, cart);
         return accountUser;
     }
 

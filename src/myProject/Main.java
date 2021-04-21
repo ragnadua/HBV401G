@@ -56,6 +56,7 @@ public class Main {
                 System.out.println("Booking confirmed");
             } else
                 System.out.println("Booking failed");
+            db.AddBooking(bokun);
         }
     }
 

@@ -3,14 +3,11 @@ package myProject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
 public class SearchController {
-    private Trip trip;
     private Database DB = Database.getInstance();
-    private SimpleDateFormat sdf;
 
     public ObservableList<Trip> getTripsByDestination(String destination) {
         ObservableList<Trip> returnList = FXCollections.observableArrayList();
