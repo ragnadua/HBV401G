@@ -75,8 +75,9 @@ public class Database {
                 new PaymentInfo(kennitala[2], "01/25", "3113444472278998", "420"),
                 new PaymentInfo(kennitala[3], "10/30", "4030403040304030", "666"),
                 new PaymentInfo(kennitala[4], "11/09", "6666000066660000", "101")};
-        //ATH????? veit ekki hvernig a ad utfaera cart:((
-        ArrayList[] kerra = {new ArrayList()};
+        // Non-functional cart item 
+        ArrayList[] kerra = {null};
+
 
         //For-lykkja sem byr til 5 Account hluti:
         for (int i = 0; i < 5; i++) {

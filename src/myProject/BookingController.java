@@ -3,31 +3,25 @@ package myProject;
 public class BookingController {
     private Trip trip;
     private Account account;
-    private Database DB;
 
+    //Usage: addToCart(Booking b);
+    //Before: Nothing.
+    //After: A booking is added to cart if a booking can be and is made,
+    //       otherwise the method prints out a fail statement.
     public void addToCart(Booking b) {
-        // done; bæta TripID, destination,Date og time inn í Cart
-        //done ;Fækka í currentCapacity ef paymentConfirmed er true
-        // done;Setja nafn og userID úr account inná passengerList
-        //Button listener???
-        if (b.getPaymentConfirmed() && !trip.getIsFullyBooked() && !trip.isCanceledTrip()) {
-            int t = b.getNmbRes();
-            trip.setCapacity(trip.getCapacity() - t);
-            account.setCart(b.getTripUnit());
-            DB.addPassengers(b);
-        }
-
+        if (b.book()) {
+            account.setCart(b);
+            System.out.println("Booking added to cart");
+        } else System.out.println("Failed adding to cart");
     }
 
+    //Usage: cancelBooking(Booking b);
+    //Before: A booking has been made and added to cart.
+    //After: The booking that was made has been taken out of the
+    //       cart and capacity restored according to how many seats the person who cancelled reserved
     public void cancelBooking(Booking b) {
-        //done;Hækkar aftur currentCapacity
-        //núllar done;nmbRes og paymentconfirmed
-        //done;Tekur nöfnin sem sett voru á passengerList út
-        //done;Tekur út af cart
-        //Button listener??
         int t = b.getNmbRes();
-        trip.setCapacity(trip.getCapacity() - t);
+        trip.setCapacity(trip.getCapacity() + t);
         account.getCart().remove(b);
-        DB.addPassengers(b).remove(b.getAccountUnit());
     }
 }

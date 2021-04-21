@@ -11,8 +11,10 @@ public class Booking {
     private boolean paymentConfirmed;
     private int nmbRes;
 
+    //Add-on for methods
     private PaymentInfo paymentInfo;
 
+    //Constructor:
     public Booking(Trip tripUnit, Account accountUnit, boolean pickUp,
                    float discount, boolean paymentConfirmed, int nmbRes) {
         this.tripUnit = tripUnit;
@@ -28,17 +30,32 @@ public class Booking {
         return this.tripUnit;
     }
 
+    public void setTripUnit(Trip tripUnit) {
+        this.tripUnit = tripUnit;
+    }
+
     public Account getAccountUnit() {
         return this.accountUnit;
     }
 
-    public float setDiscount(float f) {
-        float price = tripUnit.getPrice();
-        return (f / 100) * price;
+    public void setAccountUnit(Account accountUnit) {
+        this.accountUnit = accountUnit;
     }
 
-    //tekur frá pláss í ferðinni, minnkar capacity
-    //skilar true ef það tókst, false ef það voru ekki nægilega mörg laus pláss
+    public float getDiscount() {
+        return discount;
+    }
+
+    public float setDiscount(float f) {
+        float price = tripUnit.getPrice();
+        this.discount = (f / 100) * price;
+        return this.discount;
+    }
+
+    //Usage: reserveSpot();
+    //Before: Nothing.
+    //After: Reserves a spot on the trip, decreases the capacity of the trip.
+    //       Returns true if the method was successful, returns false if the trip no longer has capacity.
     public boolean reserveSpot() {
         if (nmbRes > tripUnit.getCapacity()) {
             return false;
@@ -50,17 +67,18 @@ public class Booking {
     }
 
     public int getNmbRes() {
-        return this.nmbRes;
+        return nmbRes;
     }
 
-    /*private void addToPassList(boolean b) {
-        if (setPaymentConfirmed() && tripUnit.isFullyBooked() && !tripUnit.isCanceledTrip()) {
-            DB.addPassengers();
-        } else System.out.println("Not Available");
+    public void setNmbRes(int nmbRes) {
+        this.nmbRes = nmbRes;
+    }
 
-    }*/
-
-    public boolean isPaymentConfirmed() {
+    //Usage: isPaymentConfirmed();
+    //Before: Nothing.
+    //After: If the cvv number of the card being used is a valid cvv number,
+    //       this method returns true and payment is confirmed else it returns false.
+    public boolean setPaymentConfirmed() {
         String regex = "^[0-9]{3}$";
         Pattern p = Pattern.compile(regex);
         String str = paymentInfo.getCvv();
@@ -68,21 +86,29 @@ public class Booking {
             return false;
         }
         Matcher m = p.matcher(str);
-        return m.matches();
-    }
-
-    public boolean getPaymentConfirmed() {
+        this.paymentConfirmed = m.matches();
         return this.paymentConfirmed;
     }
 
+    public boolean getPaymentConfirmed() {
+        return paymentConfirmed;
+    }
+
+    public boolean isPickUp() {
+        return pickUp;
+    }
+
     public boolean setPickUp() {
-        //Button listener sem returns true ef hakad i else false.
-        return false;
+        return this.pickUp;
     }
 
     //Bókar ferð, skilar true ef það tókst
+    //Usage: book();
+    //Before: Nothing.
+    //After: Returns true if a booking can be made and is then
+    //       consequently made, else it returns false and a booking was not made.
     public boolean book() {
-        return isPaymentConfirmed() && reserveSpot();
+        return setPaymentConfirmed() && reserveSpot();
     }
 
 }

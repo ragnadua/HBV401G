@@ -87,12 +87,13 @@ public class SearchController {
 
     }
 
-    public Account getAccountByIDandPassword(String ID, String password) {
-        Account account1 = new Account("2107002260", "Ragna", "Thorsdottir", "123", "rdt1@hi.is", "8637809", null, null);
-        String ID2 = account1.getUserID();
-        String pw2 = account1.getPassword();
-        if (ID.equals(ID2) && password.equals(pw2))
-            return account1;
-        else return null;
+    public ObservableList<Account> getAccountByIDandPassword(String ID, String password) {
+        ObservableList<Account> returnList = FXCollections.observableArrayList();
+        for (Account a : DB.getAllAccounts()) {
+            if (a.getUserID().compareTo(ID) == 0 && a.getPassword().compareTo(password) == 0) {
+                returnList.add(a);
+            } else return null;
+        }
+        return returnList;
     }
 }

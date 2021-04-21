@@ -1,6 +1,6 @@
 package myProject;
 
-import java.util.ArrayList;
+import javafx.collections.ObservableList;
 
 public class Account {
     private String userID;
@@ -10,12 +10,12 @@ public class Account {
     private String email;
     private String phoneNumber;
     private PaymentInfo payInfo;
-    private ArrayList cart;
+    private ObservableList<Booking> cart;
 
-
+    //Constructor:
     public Account(String userID, String firstName, String lastName,
                    String password, String email, String phoneNumber,
-                   PaymentInfo payInfo, ArrayList cart) {
+                   PaymentInfo payInfo, ObservableList<Booking> cart) {
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -83,14 +83,13 @@ public class Account {
         this.payInfo = payInfo;
     }
 
-    public ArrayList getCart() {
+    public ObservableList<Booking> getCart() {
         return cart;
     }
 
-    public void setCart(Trip t) {
-        cart.add(t);
-        // gamalt: á að uppfæra cart eftir að bookingController gerir addToCart()
-        //Uppfaert sma
+    public void setCart(Booking b) {
+        cart.add(b);
+
     }
 
 }
