@@ -1,6 +1,6 @@
 package myProject;
 
-public class paymentInfo {
+public class PaymentInfo {
 
     private String userID;
     private String expDate;
@@ -8,7 +8,7 @@ public class paymentInfo {
     private String cvv;
 
     //Constructor
-    public paymentInfo(String userID, String expDate, String cardNumber, String ccv) {
+    public PaymentInfo(String userID, String expDate, String cardNumber, String ccv) {
         this.userID = userID;
         this.expDate = expDate;
         this.cardNumber = cardNumber;
